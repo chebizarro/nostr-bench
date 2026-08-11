@@ -1,0 +1,10 @@
+{
+  "name": "nbench-s1",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "better-sqlite3": "^11.0.0"
+  }
+}

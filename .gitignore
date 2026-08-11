@@ -1,0 +1,25 @@
+# results & transcripts — never commit run data
+runs/
+report/results.html
+report/*.png
+report/dash.json
+report/data.json
+
+# node / build
+**/node_modules/
+**/.nmcache/
+**/.work/
+.work/
+*.tmp
+vitest-out.json
+
+# python
+.venv/
+__pycache__/
+*.pyc
+
+# secrets & scratch — never commit
+*.env
+.orkey
+or_models.json
+prompt-exports/

@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Install harness deps
+        run: pip install -r requirements.txt
+      - name: Wiring self-check (no API calls)
+        run: python -m grade.selfcheck
+      - name: Reference solutions pass the hidden suites
+        run: |
+          set -e
+          for t in n1_implement n2_debug; do
+            work=$(mktemp -d)
+            cp -r tasks/$t/starter/* "$work"/
+            cp -r tasks/$t/tests_hidden "$work"/tests_hidden
+            if [ -d references/$t ]; then cp references/$t/*.ts "$work"/src/; fi
+            (cd "$work" && npm install --no-audit --no-fund && npx vitest run --reporter=basic)
+          done

@@ -1,0 +1,16 @@
+{
+  "kind": "implement",
+  "grading": "hidden vitest pass-rate; score = 100 * passed/total",
+  "note": "No vuln key for implement tasks; the hidden suites in tests_hidden/ are the answer. This file exists so selfcheck can confirm the task is complete.",
+  "expected_exports": {
+    "src/nip01.ts": ["serializeEvent", "getEventHash", "signEvent", "verifyEvent"],
+    "src/nip19.ts": ["encodeBech32", "decodeBech32", "encodeNprofile", "decodeNprofile", "encodeNevent", "decodeNevent"]
+  },
+  "traps": [
+    "serialization must use compact separators + JSON escaping, not pretty JSON",
+    "Schnorr (BIP-340) not ECDSA",
+    "verifyEvent must recompute the id, not trust the claimed id",
+    "bech32 not bech32m",
+    "unknown TLV types ignored on decode"
+  ]
+}

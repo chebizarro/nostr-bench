@@ -1,0 +1,29 @@
+{
+  "kind": "audit",
+  "vulns": [
+    {"id": "sqli", "aliases": ["sql injection", "injection in notesforuser", "string built query"],
+     "file": "src/db.ts", "cwe": "CWE-89", "severity": "critical"},
+    {"id": "path_traversal", "aliases": ["directory traversal", "path traversal", "arbitrary file read", "sendfile"],
+     "file": "src/routes.ts", "cwe": "CWE-22", "severity": "high"},
+    {"id": "jwt_alg_confusion", "aliases": ["alg none", "algorithm confusion", "jwt algorithm from header", "none algorithm"],
+     "file": "src/auth.ts", "cwe": "CWE-347", "severity": "critical"},
+    {"id": "ssrf", "aliases": ["server side request forgery", "ssrf", "fetch user url", "webhook fetch"],
+     "file": "src/routes.ts", "cwe": "CWE-918", "severity": "high"},
+    {"id": "timing_unsafe_compare", "aliases": ["timing attack", "non-constant-time compare", "token comparison", "=== on secret", "timingsafeequal"],
+     "file": "src/auth.ts", "cwe": "CWE-208", "severity": "medium"},
+    {"id": "missing_authz", "aliases": ["missing authorization", "broken access control", "admin route no auth", "no admin check", "idor"],
+     "file": "src/routes.ts", "cwe": "CWE-862", "severity": "high"},
+    {"id": "prototype_pollution", "aliases": ["prototype pollution", "__proto__", "deepmerge", "recursive merge"],
+     "file": "src/util.ts", "cwe": "CWE-1321", "severity": "high"},
+    {"id": "weak_password_hash", "aliases": ["md5", "weak hashing", "unsalted hash", "password hashing", "insecure hash"],
+     "file": "src/auth.ts", "cwe": "CWE-916", "severity": "high"}
+  ],
+  "red_herrings": [
+    {"id": "rh_dead_eval", "aliases": ["eval", "commented eval", "eval injection in util"],
+     "note": "the eval line is commented-out dead code, not reachable"},
+    {"id": "rh_math_random_cachebuster", "aliases": ["math.random", "insecure randomness", "weak random cachebuster", "predictable random"],
+     "note": "Math.random is used only for a non-security cache-buster id"},
+    {"id": "rh_missing_helmet", "aliases": ["helmet", "missing security headers", "no helmet", "csp header missing"],
+     "note": "defense-in-depth header hardening, not one of the graded exploitable vulns"}
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "kind": "debug",
+  "grading": "hidden vitest pass-rate over the 5 bug groups; regressions on tests_visible subtract.",
+  "bugs": [
+    {"id": "b1_object_hash", "file": "src/nostr.ts",
+     "desc": "getEventHash serializes the whole event object via JSON.stringify instead of the canonical [0,pubkey,created_at,kind,tags,content] array; includes id/sig and wrong key order.",
+     "fix": "serialize the 6-element array with compact JSON, then sha256."},
+    {"id": "b2_created_at_ms", "file": "src/nostr.ts",
+     "desc": "createEvent sets created_at to Date.now() (milliseconds).",
+     "fix": "Math.floor(Date.now() / 1000)."},
+    {"id": "b3_tag_filter_all", "file": "src/filter.ts",
+     "desc": "#e/#p filter matches against values of ALL tags rather than only tags whose name equals the letter.",
+     "fix": "filter tags by t[0] === key.slice(1) before comparing t[1]."},
+    {"id": "b4_since_until_inverted", "file": "src/filter.ts",
+     "desc": "since/until comparisons are inverted (since rejects newer events, until rejects older).",
+     "fix": "reject when created_at < since, or created_at > until."},
+    {"id": "b5_verify_trusts_claimed_id", "file": "src/nostr.ts",
+     "desc": "verifyEvent checks the signature against the claimed id but never recomputes the hash, so tampered content passes.",
+     "fix": "recompute id via getEventHash and require it equals e.id before/along with schnorr.verify."}
+  ]
+}

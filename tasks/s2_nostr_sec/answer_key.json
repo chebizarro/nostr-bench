@@ -1,0 +1,25 @@
+{
+  "kind": "audit",
+  "vulns": [
+    {"id": "nsec_logged", "aliases": ["logs nsec", "secret key in log", "private key logged", "key in console.log", "nsec leak"],
+     "file": "src/bot.ts", "cwe": "CWE-532", "severity": "critical"},
+    {"id": "verify_after_process", "aliases": ["verify after processing", "signature checked too late", "acts before verifying", "process before verify", "missing signature check ordering", "toctou auth"],
+     "file": "src/bot.ts", "cwe": "CWE-347", "severity": "critical"},
+    {"id": "nip04_instead_of_nip44", "aliases": ["nip-04", "nip04", "should use nip-44", "nip44", "unauthenticated encryption", "malleable ciphertext", "no auth tag"],
+     "file": "src/nip47.ts", "cwe": "CWE-353", "severity": "high"},
+    {"id": "no_replay_protection", "aliases": ["replay", "no created_at window", "no dedup", "event id dedup", "no timestamp check", "replay attack", "SEEN set unused"],
+     "file": "src/nip47.ts", "cwe": "CWE-294", "severity": "high"},
+    {"id": "nwc_verify_missing", "aliases": ["wallet request not verified", "no verifyevent in nip47", "unauthenticated wallet request", "missing signature verification on request", "forged wallet request"],
+     "file": "src/nip47.ts", "cwe": "CWE-306", "severity": "critical"},
+    {"id": "relay_ssrf", "aliases": ["ssrf", "server side request forgery", "user controlled relay url", "connects to arbitrary url", "internal network websocket"],
+     "file": "src/relay-connect.ts", "cwe": "CWE-918", "severity": "high"},
+    {"id": "nsec_in_query", "aliases": ["secret in query string", "nsec in url", "credential in query param", "connection secret in query", "secret via GET"],
+     "file": "src/relay-connect.ts", "cwe": "CWE-598", "severity": "high"}
+  ],
+  "red_herrings": [
+    {"id": "rh_kinds_filter", "aliases": ["subscribes to kind 1", "filter kinds", "only kind 1 subscription", "wrong kind filter"],
+     "note": "the kinds:[1] subscription is a functional choice, not a security vuln"},
+    {"id": "rh_json_parse", "aliases": ["json.parse without try", "unhandled json parse", "json parse dos"],
+     "note": "unguarded JSON.parse of already-decrypted authenticated content is not the graded issue"}
+  ]
+}

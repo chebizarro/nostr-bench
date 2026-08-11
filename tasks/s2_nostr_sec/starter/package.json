@@ -1,0 +1,9 @@
+{
+  "name": "nbench-s2",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "nostr-tools": "^2.7.0",
+    "ws": "^8.18.0"
+  }
+}

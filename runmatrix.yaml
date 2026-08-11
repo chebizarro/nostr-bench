@@ -1,0 +1,125 @@
+# nostr-bench run matrix
+# Prices are indicative (per 1M tokens, USD) for planning; the harness records
+# provider-reported cost per request at run time and those override these.
+
+defaults:
+  reps: 3
+  temperature: 0.2
+  top_p: 1.0
+  max_context: 128000        # lowest common denominator across roster
+  seed: 1337
+
+caps:
+  microagent:
+    max_turns: 25
+    wall_clock_s: 300
+  oneshot:
+    wall_clock_s: 180
+
+tiers: [T1, T2]              # terse vs. engineered prompt
+tasks: [n1_implement, n2_debug, s1_audit, s2_nostr_sec]
+
+# Local marginal cost for bang-for-buck (electricity + amortization), $/hr.
+local_rig:
+  name: "2x Tesla P40 (48GB)"
+  cost_per_hour: 0.15
+
+models:
+  # --- Frontier (cloud only) ---
+  - id: deepseek/deepseek-v4-pro
+    tier: frontier
+    arms: [cloud]
+    price: {in: 1.74, out: 3.48}
+  - id: moonshotai/kimi-k2.6
+    tier: frontier
+    arms: [cloud]
+    price: {in: 0.58, out: 2.44}
+  - id: moonshotai/kimi-k3
+    tier: frontier
+    arms: [cloud]
+    price: {in: 1.2, out: 5.0}   # 2.8T open model; verify at run time
+    note: "generational step up from K2.6 (2.8T) — added to see if it moves the top"
+  - id: z-ai/glm-5.2
+    tier: frontier
+    arms: [cloud]
+    price: {in: 0.45, out: 3.31}
+  # --- Value cloud ---
+  - id: deepseek/deepseek-v4-flash
+    tier: value
+    arms: [cloud]
+    price: {in: 0.054, out: 0.242}
+  # --- Upper-mid ---
+  - id: qwen/qwen3.5-397b-a17b
+    tier: upper-mid
+    arms: [cloud]              # local only on 256GB+ unified; enable if available
+    price: {in: 0.7, out: 2.2}
+  # --- Mid (cloud + big local) ---
+  - id: openai/gpt-oss-120b
+    tier: mid
+    arms: [cloud, local]
+    local_min_vram_gb: 96
+    price: {in: 0.1, out: 0.5}
+  - id: meta-llama/llama-3.3-70b-instruct
+    tier: mid
+    arms: [cloud, local]
+    local_min_vram_gb: 48
+    price: {in: 0.1, out: 0.4}
+  # --- Small agentic (fits your P40 rig) ---
+  - id: meta/muse-glimmer-30b
+    tier: small-agentic
+    arms: [cloud, local]
+    local_min_vram_gb: 24
+    local_quant: "Q4_K_M"     # Meta official K-Quant 4-bit
+    price: {in: 0.10, out: 0.40}   # placeholder, fresh listing — verify at run time
+    note: "day-one serving stacks may be buggy; rerun after first patch cycle"
+  - id: google/gemma-4-31b-it
+    tier: small
+    arms: [cloud, local]
+    local_min_vram_gb: 24
+    local_quant: "Q4_K_M"
+    price: {in: 0.1, out: 0.3}
+  - id: qwen/qwen3.6-35b-a3b
+    tier: small
+    arms: [cloud, local]
+    local_min_vram_gb: 24
+    local_quant: "Q4_K_M"
+    price: {in: 0.1, out: 0.3}
+  # --- Floor ---
+  - id: openai/gpt-oss-20b
+    tier: floor
+    arms: [cloud, local]
+    local_min_vram_gb: 16
+    local_quant: "Q4_K_M"
+    price: {in: 0.05, out: 0.2}
+
+# Mode C: Repo Prompt CE oracle/editor pairings
+repoprompt_pairings:
+  - name: glm-oss
+    oracle: z-ai/glm-5.2
+    editor: openai/gpt-oss-20b
+  - name: kimi-qwen
+    oracle: moonshotai/kimi-k2.6
+    editor: qwen/qwen3.6-35b-a3b
+  - name: flash-glimmer
+    oracle: deepseek/deepseek-v4-flash
+    editor: meta/muse-glimmer-30b
+  - name: all-local        # runs entirely on the P40 rig
+    oracle: meta/muse-glimmer-30b
+    editor: openai/gpt-oss-20b
+
+# Phase gating: which models advance from the one-shot screen to the agentic arm.
+phases:
+  phase1_oneshot:
+    modes: [oneshot]
+    models: all
+  phase2_agent:
+    modes: [microagent]
+    advance_if: "phase1_mean_score >= 40 OR local_min_vram_gb <= 24"
+  phase3_orchestration:
+    modes: [repoprompt]
+    use: repoprompt_pairings
+
+# Fixed judge for audit finding write-ups. Never a roster member.
+judge:
+  model: anthropic/claude-frontier   # pin exact version at run time
+  temperature: 0.0
