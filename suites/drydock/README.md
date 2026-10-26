@@ -45,6 +45,7 @@ must never be published.
 | `sweep.py` | starts llama-server(s) per config, wires `DRYDOCK_*` role env, runs reps, samples nvidia-smi |
 | `report.py` | ranked Markdown/JSON in `report/drydock-results.*`, prompt A/B and role-signal tables |
 | `judge.py` | frontier-model quality pass over saved results: per-finding real/minor/false-positive/hallucinated labels, reference review, usefulness |
+| `render_reviews.py` | renders saved results as readable Markdown reviews (planted bug, each finding, judge verdict, diff) into `runs/drydock/reviews/` (gitignored: contains hidden answers) |
 | `build_agentic.py` | clones each case's repo from corpus clone URLs, finds a base commit where the patch applies, writes `data/drydock-agentic-v2.json` for `sweep.py --agentic` |
 
 ## Step 1: OpenRouter screen (full precision, before touching Lemmy)
