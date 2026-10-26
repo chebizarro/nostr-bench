@@ -1,0 +1,3015 @@
+[
+ {
+  "cases": 135,
+  "strict": 0.7555555555555555,
+  "detected": 0.8666666666666667,
+  "lenient": 0.8,
+  "line_err_med": 0.0,
+  "noise": 3.2,
+  "noise_hi": 0.4444444444444444,
+  "extra_on_planted": 3.5555555555555554,
+  "calib_mae": 0.6249742268041237,
+  "mean_conf": 0.7678007518796992,
+  "ok": 0.9703703703703703,
+  "repairs": 1.8518518518518519,
+  "p50_s": 77.815,
+  "p95_s": 554.4005,
+  "over_prod": 0.1925925925925926,
+  "pp_tps": null,
+  "tg_tps": null,
+  "reason_kchars": 102.88165925925927,
+  "fail_stages": {
+   "planner": 1,
+   "reviewer": 3
+  },
+  "by_family": {
+   "correctness": 0.8070175438596491,
+   "security": 0.9696969696969697
+  },
+  "by_op": {
+   "bool_flip": "15/15",
+   "cmp_flip": "13/15",
+   "drop_await": "11/15",
+   "hardcoded_secret": "23/24",
+   "return_flip": "7/12",
+   "tls_off": "9/9"
+  },
+  "wall_h": 4.814945,
+  "billed_usd": 3.0539808146,
+  "retries": 0,
+  "providers": {
+   "Relace": 76,
+   "InferenceNet": 72,
+   "Morph": 15,
+   "ModelRun": 71,
+   "Wafer": 50,
+   "Cohere": 18,
+   "Reka": 5,
+   "PrimeIntellect": 25,
+   "Parasail": 13,
+   "Venice": 9,
+   "CoreWeave": 52,
+   "DigitalOcean": 94,
+   "Together": 33,
+   "Novita": 10,
+   "Fireworks": 63,
+   "OpenInference": 3,
+   "Makora": 15,
+   "DeepInfra": 4,
+   "Decart": 18,
+   "Nebius": 1
+  },
+  "roles": {
+   "planner": {
+    "repairs_per_case": 0.9925925925925926,
+    "fail_rate": 0.007407407407407408,
+    "out_tokens_per_case": 10634.955555555556,
+    "in_tokens_per_case": 4051.251851851852
+   },
+   "reviewer": {
+    "repairs_per_case": 0.8592592592592593,
+    "fail_rate": 0.022222222222222223,
+    "out_tokens_per_case": 19435.096296296295,
+    "in_tokens_per_case": 5438.422222222222
+   },
+   "walkthrough": {
+    "repairs_per_case": 0.0,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 420.2888888888889,
+    "in_tokens_per_case": 3408.4222222222224
+   }
+  },
+  "strict_min": 0.7333333333333333,
+  "strict_max": 0.8,
+  "reps": 3,
+  "hosted": true,
+  "usd_per_review": 0.02262208010814815,
+  "deployable": true,
+  "lemmy": "cloud only",
+  "phase": "openrouter",
+  "label": "ref:deepseek-v4.1-flash",
+  "gpu": {}
+ },
+ {
+  "cases": 135,
+  "strict": 0.7111111111111111,
+  "detected": 0.8444444444444444,
+  "lenient": 0.7666666666666667,
+  "line_err_med": 0.0,
+  "noise": 4.7555555555555555,
+  "noise_hi": 1.3777777777777778,
+  "extra_on_planted": 4.944444444444445,
+  "calib_mae": 0.6801964636542239,
+  "mean_conf": 0.7888243430152144,
+  "ok": 0.9925925925925926,
+  "repairs": 1.9481481481481482,
+  "p50_s": 150.257,
+  "p95_s": 344.83109999999994,
+  "over_prod": 0.362962962962963,
+  "pp_tps": null,
+  "tg_tps": null,
+  "reason_kchars": 57.95037777777778,
+  "fail_stages": {
+   "reviewer": 1
+  },
+  "by_family": {
+   "correctness": 0.7719298245614035,
+   "security": 0.9696969696969697
+  },
+  "by_op": {
+   "bool_flip": "12/15",
+   "cmp_flip": "13/15",
+   "drop_await": "12/15",
+   "hardcoded_secret": "23/24",
+   "return_flip": "7/12",
+   "tls_off": "9/9"
+  },
+  "wall_h": 6.613384166666667,
+  "billed_usd": 5.663922347,
+  "retries": 0,
+  "providers": {
+   "Modal": 188,
+   "ModelRun": 95,
+   "CoreWeave": 15,
+   "AkashML": 58,
+   "Parasail": 35,
+   "Near AI": 98,
+   "DekaLLM": 64,
+   "Ionstream": 39,
+   "Reka": 39,
+   "Wafer": 33,
+   "Phala": 1,
+   "Darkbloom": 1
+  },
+  "roles": {
+   "planner": {
+    "repairs_per_case": 0.9703703703703703,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 2357.637037037037,
+    "in_tokens_per_case": 4147.718518518518
+   },
+   "reviewer": {
+    "repairs_per_case": 0.9777777777777777,
+    "fail_rate": 0.007407407407407408,
+    "out_tokens_per_case": 15599.525925925926,
+    "in_tokens_per_case": 5765.540740740741
+   },
+   "walkthrough": {
+    "repairs_per_case": 0.0,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 864.0518518518519,
+    "in_tokens_per_case": 3632.140740740741
+   }
+  },
+  "strict_min": 0.7,
+  "strict_max": 0.7333333333333333,
+  "reps": 3,
+  "hosted": true,
+  "usd_per_review": 0.041954980348148145,
+  "deployable": true,
+  "lemmy": "Q4_K_M 16.5 GB, 1xP40",
+  "phase": "openrouter",
+  "label": "or:qwen3.8-27b",
+  "gpu": {}
+ },
+ {
+  "cases": 135,
+  "strict": 0.5666666666666667,
+  "detected": 0.7888888888888889,
+  "lenient": 0.5888888888888889,
+  "line_err_med": 1,
+  "noise": 2.577777777777778,
+  "noise_hi": 0.8,
+  "extra_on_planted": 2.3777777777777778,
+  "calib_mae": 0.6542641509433962,
+  "mean_conf": 0.8155380577427821,
+  "ok": 0.9037037037037037,
+  "repairs": 1.5925925925925926,
+  "p50_s": 149.409,
+  "p95_s": 620.891,
+  "over_prod": 0.37777777777777777,
+  "pp_tps": null,
+  "tg_tps": null,
+  "reason_kchars": 33.187237037037036,
+  "fail_stages": {
+   "planner": 4,
+   "reviewer": 9
+  },
+  "by_family": {
+   "correctness": 0.7192982456140351,
+   "security": 0.9090909090909091
+  },
+  "by_op": {
+   "bool_flip": "12/15",
+   "cmp_flip": "12/15",
+   "drop_await": "9/15",
+   "hardcoded_secret": "21/24",
+   "return_flip": "8/12",
+   "tls_off": "9/9"
+  },
+  "wall_h": 8.342698888888888,
+  "billed_usd": 5.21315538488,
+  "retries": 0,
+  "providers": {
+   "Reka": 82,
+   "Alibaba": 69,
+   "Relace": 93,
+   "DigitalOcean": 51,
+   "Novita": 160,
+   "Cloudflare": 49,
+   "SiliconFlow": 21,
+   "Azure": 2,
+   "Baidu": 21,
+   "AtlasCloud": 6,
+   "StreamLake": 35,
+   "GMICloud": 1
+  },
+  "roles": {
+   "planner": {
+    "repairs_per_case": 0.8296296296296296,
+    "fail_rate": 0.02962962962962963,
+    "out_tokens_per_case": 1550.9481481481482,
+    "in_tokens_per_case": 3494.5703703703703
+   },
+   "reviewer": {
+    "repairs_per_case": 0.762962962962963,
+    "fail_rate": 0.06666666666666667,
+    "out_tokens_per_case": 8091.037037037037,
+    "in_tokens_per_case": 4279.837037037037
+   },
+   "walkthrough": {
+    "repairs_per_case": 0.0,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 545.8962962962963,
+    "in_tokens_per_case": 3038.911111111111
+   }
+  },
+  "strict_min": 0.4666666666666667,
+  "strict_max": 0.6333333333333333,
+  "reps": 3,
+  "hosted": true,
+  "usd_per_review": 0.03861596581392593,
+  "deployable": true,
+  "lemmy": "cloud only",
+  "phase": "openrouter",
+  "label": "ref:deepseek-v4-pro",
+  "gpu": {}
+ },
+ {
+  "cases": 135,
+  "strict": 0.5666666666666667,
+  "detected": 0.7777777777777778,
+  "lenient": 0.6666666666666666,
+  "line_err_med": 0.5,
+  "noise": 1.7555555555555555,
+  "noise_hi": 0.4444444444444444,
+  "extra_on_planted": 1.511111111111111,
+  "calib_mae": 0.6332085561497326,
+  "mean_conf": 0.8669172932330828,
+  "ok": 1.0,
+  "repairs": 0.014814814814814815,
+  "p50_s": 12.173,
+  "p95_s": 23.58469999999999,
+  "over_prod": 0.0,
+  "pp_tps": null,
+  "tg_tps": null,
+  "reason_kchars": 0.0,
+  "fail_stages": {},
+  "by_family": {
+   "correctness": 0.6491228070175439,
+   "security": 1.0
+  },
+  "by_op": {
+   "bool_flip": "13/15",
+   "cmp_flip": "12/15",
+   "drop_await": "9/15",
+   "hardcoded_secret": "24/24",
+   "return_flip": "3/12",
+   "tls_off": "9/9"
+  },
+  "wall_h": 0.5062433333333334,
+  "billed_usd": 0.449340372,
+  "retries": 0,
+  "providers": {
+   "Reka": 25,
+   "ModelRun": 71,
+   "Modal": 108,
+   "Parasail": 30,
+   "AkashML": 18,
+   "Near AI": 45,
+   "Darkbloom": 7,
+   "DekaLLM": 40,
+   "Ionstream": 29,
+   "Wafer": 30,
+   "CoreWeave": 2,
+   "Venice": 1,
+   "Chutes": 1
+  },
+  "roles": {
+   "planner": {
+    "repairs_per_case": 0.0,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 166.82222222222222,
+    "in_tokens_per_case": 3588.4
+   },
+   "reviewer": {
+    "repairs_per_case": 0.014814814814814815,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 726.9851851851852,
+    "in_tokens_per_case": 3993.614814814815
+   },
+   "walkthrough": {
+    "repairs_per_case": 0.0,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 275.65185185185186,
+    "in_tokens_per_case": 3603.311111111111
+   }
+  },
+  "strict_min": 0.5,
+  "strict_max": 0.6333333333333333,
+  "reps": 3,
+  "hosted": true,
+  "usd_per_review": 0.0033284472,
+  "deployable": true,
+  "lemmy": "Q4_K_M 16.5 GB, 1xP40",
+  "phase": "openrouter",
+  "label": "or:qwen3.8-27b+think-off+typed-prompt",
+  "gpu": {}
+ },
+ {
+  "cases": 135,
+  "strict": 0.5222222222222223,
+  "detected": 0.6555555555555556,
+  "lenient": 0.5777777777777777,
+  "line_err_med": 1,
+  "noise": 1.3777777777777778,
+  "noise_hi": 0.3333333333333333,
+  "extra_on_planted": 1.288888888888889,
+  "calib_mae": 0.5917791411042944,
+  "mean_conf": 0.8504,
+  "ok": 1.0,
+  "repairs": 0.022222222222222223,
+  "p50_s": 13.223,
+  "p95_s": 27.042799999999996,
+  "over_prod": 0.0,
+  "pp_tps": null,
+  "tg_tps": null,
+  "reason_kchars": 0.0,
+  "fail_stages": {},
+  "by_family": {
+   "correctness": 0.45614035087719296,
+   "security": 1.0
+  },
+  "by_op": {
+   "bool_flip": "10/15",
+   "cmp_flip": "11/15",
+   "drop_await": "2/15",
+   "hardcoded_secret": "24/24",
+   "return_flip": "3/12",
+   "tls_off": "9/9"
+  },
+  "wall_h": 0.5812652777777778,
+  "billed_usd": 0.468495681,
+  "retries": 0,
+  "providers": {
+   "Modal": 123,
+   "ModelRun": 60,
+   "Parasail": 50,
+   "Near AI": 28,
+   "Wafer": 50,
+   "Reka": 21,
+   "DekaLLM": 40,
+   "AkashML": 20,
+   "Ionstream": 3,
+   "Novita": 6,
+   "Phala": 6,
+   "Mancer 2": 1
+  },
+  "roles": {
+   "planner": {
+    "repairs_per_case": 0.0,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 162.62222222222223,
+    "in_tokens_per_case": 3586.3185185185184
+   },
+   "reviewer": {
+    "repairs_per_case": 0.022222222222222223,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 653.9925925925926,
+    "in_tokens_per_case": 4210.614814814815
+   },
+   "walkthrough": {
+    "repairs_per_case": 0.0,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 267.3851851851852,
+    "in_tokens_per_case": 3603.4
+   }
+  },
+  "strict_min": 0.4666666666666667,
+  "strict_max": 0.5666666666666667,
+  "reps": 3,
+  "hosted": true,
+  "usd_per_review": 0.0034703383777777777,
+  "deployable": true,
+  "lemmy": "Q4_K_M 16.5 GB, 1xP40",
+  "phase": "openrouter",
+  "label": "or:qwen3.8-27b+think-off+calibrated-prompt",
+  "gpu": {}
+ },
+ {
+  "cases": 135,
+  "strict": 0.5,
+  "detected": 0.8111111111111111,
+  "lenient": 0.5444444444444444,
+  "line_err_med": 1,
+  "noise": 5.555555555555555,
+  "noise_hi": 0.9111111111111111,
+  "extra_on_planted": 5.2444444444444445,
+  "calib_mae": 0.6700967117988395,
+  "mean_conf": 0.7367275097783572,
+  "ok": 0.9925925925925926,
+  "repairs": 1.9037037037037037,
+  "p50_s": 22.481,
+  "p95_s": 42.9465,
+  "over_prod": 0.014814814814814815,
+  "pp_tps": null,
+  "tg_tps": null,
+  "reason_kchars": 0.2042962962962963,
+  "fail_stages": {
+   "reviewer": 1
+  },
+  "by_family": {
+   "correctness": 0.7719298245614035,
+   "security": 0.8787878787878788
+  },
+  "by_op": {
+   "bool_flip": "15/15",
+   "cmp_flip": "14/15",
+   "drop_await": "10/15",
+   "hardcoded_secret": "21/24",
+   "return_flip": "5/12",
+   "tls_off": "8/9"
+  },
+  "wall_h": 1.0681438888888888,
+  "billed_usd": 0.7713327818,
+  "retries": 0,
+  "providers": {
+   "DigitalOcean": 98,
+   "Cohere": 25,
+   "Wafer": 65,
+   "Relace": 72,
+   "CoreWeave": 41,
+   "Fireworks": 64,
+   "Morph": 24,
+   "InferenceNet": 74,
+   "ModelRun": 67,
+   "Parasail": 18,
+   "PrimeIntellect": 24,
+   "Novita": 9,
+   "Makora": 6,
+   "Together": 30,
+   "Venice": 13,
+   "DeepInfra": 3,
+   "Reka": 8,
+   "OpenInference": 4,
+   "Decart": 14,
+   "AtlasCloud": 1,
+   "Crusoe": 1
+  },
+  "roles": {
+   "planner": {
+    "repairs_per_case": 0.9925925925925926,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 792.5259259259259,
+    "in_tokens_per_case": 3919.9777777777776
+   },
+   "reviewer": {
+    "repairs_per_case": 0.9111111111111111,
+    "fail_rate": 0.007407407407407408,
+    "out_tokens_per_case": 4670.7555555555555,
+    "in_tokens_per_case": 5660.422222222222
+   },
+   "walkthrough": {
+    "repairs_per_case": 0.0,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 262.5925925925926,
+    "in_tokens_per_case": 3442.488888888889
+   }
+  },
+  "strict_min": 0.43333333333333335,
+  "strict_max": 0.6,
+  "reps": 3,
+  "hosted": true,
+  "usd_per_review": 0.0057135761614814816,
+  "deployable": true,
+  "lemmy": "cloud only",
+  "phase": "openrouter",
+  "label": "ref:deepseek-v4.1-flash+think-off",
+  "gpu": {}
+ },
+ {
+  "cases": 135,
+  "strict": 0.5,
+  "detected": 0.7444444444444445,
+  "lenient": 0.5666666666666667,
+  "line_err_med": 1,
+  "noise": 1.9111111111111112,
+  "noise_hi": 0.6444444444444445,
+  "extra_on_planted": 2.033333333333333,
+  "calib_mae": 0.6864035087719298,
+  "mean_conf": 0.8643630573248408,
+  "ok": 0.9925925925925926,
+  "repairs": 1.711111111111111,
+  "p50_s": 23.283,
+  "p95_s": 42.6228,
+  "over_prod": 0.007407407407407408,
+  "pp_tps": null,
+  "tg_tps": null,
+  "reason_kchars": 0.0,
+  "fail_stages": {
+   "reviewer": 1
+  },
+  "by_family": {
+   "correctness": 0.5964912280701754,
+   "security": 1.0
+  },
+  "by_op": {
+   "bool_flip": "13/15",
+   "cmp_flip": "12/15",
+   "drop_await": "6/15",
+   "hardcoded_secret": "24/24",
+   "return_flip": "3/12",
+   "tls_off": "9/9"
+  },
+  "wall_h": 1.1029030555555555,
+  "billed_usd": 0.742800297,
+  "retries": 0,
+  "providers": {
+   "ModelRun": 83,
+   "Near AI": 109,
+   "Modal": 173,
+   "Parasail": 39,
+   "AkashML": 53,
+   "Ionstream": 37,
+   "DekaLLM": 54,
+   "Reka": 42,
+   "Chutes": 4,
+   "CoreWeave": 14,
+   "Darkbloom": 1,
+   "Wafer": 22,
+   "DeepInfra": 1,
+   "Alibaba": 1,
+   "Phala": 1
+  },
+  "roles": {
+   "planner": {
+    "repairs_per_case": 1.0,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 511.1333333333333,
+    "in_tokens_per_case": 3925.651851851852
+   },
+   "reviewer": {
+    "repairs_per_case": 0.7111111111111111,
+    "fail_rate": 0.007407407407407408,
+    "out_tokens_per_case": 1405.2296296296297,
+    "in_tokens_per_case": 4626.029629629629
+   },
+   "walkthrough": {
+    "repairs_per_case": 0.0,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 264.3851851851852,
+    "in_tokens_per_case": 3556.82962962963
+   }
+  },
+  "strict_min": 0.4666666666666667,
+  "strict_max": 0.5333333333333333,
+  "reps": 3,
+  "hosted": true,
+  "usd_per_review": 0.0055022244222222225,
+  "deployable": true,
+  "lemmy": "Q4_K_M 16.5 GB, 1xP40",
+  "phase": "openrouter",
+  "label": "or:qwen3.8-27b+think-off",
+  "gpu": {}
+ },
+ {
+  "cases": 135,
+  "strict": 0.4888888888888889,
+  "detected": 0.7555555555555555,
+  "lenient": 0.5555555555555556,
+  "line_err_med": 1.0,
+  "noise": 3.7111111111111112,
+  "noise_hi": 0.8222222222222222,
+  "extra_on_planted": 3.611111111111111,
+  "calib_mae": 0.6686991869918699,
+  "mean_conf": 0.7732649253731343,
+  "ok": 0.9629629629629629,
+  "repairs": 1.962962962962963,
+  "p50_s": 53.381,
+  "p95_s": 108.58349999999997,
+  "over_prod": 0.014814814814814815,
+  "pp_tps": null,
+  "tg_tps": null,
+  "reason_kchars": 0.0,
+  "fail_stages": {
+   "reviewer": 5
+  },
+  "by_family": {
+   "correctness": 0.6666666666666666,
+   "security": 0.9090909090909091
+  },
+  "by_op": {
+   "bool_flip": "14/15",
+   "cmp_flip": "12/15",
+   "drop_await": "6/15",
+   "hardcoded_secret": "21/24",
+   "return_flip": "6/12",
+   "tls_off": "9/9"
+  },
+  "wall_h": 2.4488019444444444,
+  "billed_usd": 2.629638546815,
+  "retries": 0,
+  "providers": {
+   "Novita": 163,
+   "Baidu": 22,
+   "Cloudflare": 59,
+   "DigitalOcean": 102,
+   "Reka": 81,
+   "Alibaba": 77,
+   "Relace": 113,
+   "SiliconFlow": 16,
+   "Azure": 2,
+   "AtlasCloud": 4,
+   "StreamLake": 24
+  },
+  "roles": {
+   "planner": {
+    "repairs_per_case": 0.8888888888888888,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 444.14074074074074,
+    "in_tokens_per_case": 3733.8518518518517
+   },
+   "reviewer": {
+    "repairs_per_case": 1.0740740740740742,
+    "fail_rate": 0.037037037037037035,
+    "out_tokens_per_case": 2487.1185185185186,
+    "in_tokens_per_case": 5174.422222222222
+   },
+   "walkthrough": {
+    "repairs_per_case": 0.0,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 262.9851851851852,
+    "in_tokens_per_case": 3286.296296296296
+   }
+  },
+  "strict_min": 0.43333333333333335,
+  "strict_max": 0.5333333333333333,
+  "reps": 3,
+  "hosted": true,
+  "usd_per_review": 0.01947880405048148,
+  "deployable": true,
+  "lemmy": "cloud only",
+  "phase": "openrouter",
+  "label": "ref:deepseek-v4-pro+think-off",
+  "gpu": {}
+ },
+ {
+  "cases": 135,
+  "strict": 0.4222222222222222,
+  "detected": 0.6555555555555556,
+  "lenient": 0.45555555555555555,
+  "line_err_med": 1,
+  "noise": 3.422222222222222,
+  "noise_hi": 0.7333333333333333,
+  "extra_on_planted": 2.888888888888889,
+  "calib_mae": 0.741006711409396,
+  "mean_conf": 0.8520132743362832,
+  "ok": 0.9777777777777777,
+  "repairs": 1.8296296296296297,
+  "p50_s": 57.457,
+  "p95_s": 112.99229999999986,
+  "over_prod": 0.044444444444444446,
+  "pp_tps": null,
+  "tg_tps": null,
+  "reason_kchars": 0.0,
+  "fail_stages": {
+   "reviewer": 3
+  },
+  "by_family": {
+   "correctness": 0.49122807017543857,
+   "security": 0.9393939393939394
+  },
+  "by_op": {
+   "bool_flip": "11/15",
+   "cmp_flip": "12/15",
+   "drop_await": "1/15",
+   "hardcoded_secret": "23/24",
+   "return_flip": "4/12",
+   "tls_off": "8/9"
+  },
+  "wall_h": 2.9586822222222224,
+  "billed_usd": 1.73265977,
+  "retries": 0,
+  "providers": {
+   "DeepInfra": 132,
+   "Reka": 275,
+   "Alibaba": 161,
+   "SiliconFlow": 38,
+   "Venice": 39,
+   "Phala": 1
+  },
+  "roles": {
+   "planner": {
+    "repairs_per_case": 1.0,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 583.6296296296297,
+    "in_tokens_per_case": 3964.362962962963
+   },
+   "reviewer": {
+    "repairs_per_case": 0.8296296296296296,
+    "fail_rate": 0.022222222222222223,
+    "out_tokens_per_case": 2867.859259259259,
+    "in_tokens_per_case": 4991.540740740741
+   },
+   "walkthrough": {
+    "repairs_per_case": 0.0,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 254.46666666666667,
+    "in_tokens_per_case": 3485.637037037037
+   }
+  },
+  "strict_min": 0.36666666666666664,
+  "strict_max": 0.5,
+  "reps": 3,
+  "hosted": true,
+  "usd_per_review": 0.012834516814814814,
+  "deployable": true,
+  "lemmy": "Q4_K_M 16.8 GB, 1xP40",
+  "phase": "openrouter",
+  "label": "or:qwen3.6-27b+think-off",
+  "gpu": {}
+ },
+ {
+  "cases": 135,
+  "strict": 0.4111111111111111,
+  "detected": 0.7777777777777778,
+  "lenient": 0.45555555555555555,
+  "line_err_med": 2.0,
+  "noise": 3.6444444444444444,
+  "noise_hi": 0.4444444444444444,
+  "extra_on_planted": 3.1777777777777776,
+  "calib_mae": 0.7696594427244582,
+  "mean_conf": 0.873347022587269,
+  "ok": 1.0,
+  "repairs": 2,
+  "p50_s": 211.536,
+  "p95_s": 336.5938,
+  "over_prod": 0.17777777777777778,
+  "pp_tps": null,
+  "tg_tps": null,
+  "reason_kchars": 42.464785185185185,
+  "fail_stages": {},
+  "by_family": {
+   "correctness": 0.6666666666666666,
+   "security": 0.9696969696969697
+  },
+  "by_op": {
+   "bool_flip": "12/15",
+   "cmp_flip": "10/15",
+   "drop_await": "7/15",
+   "hardcoded_secret": "24/24",
+   "return_flip": "9/12",
+   "tls_off": "8/9"
+  },
+  "wall_h": 8.363074444444445,
+  "billed_usd": 5.43309292,
+  "retries": 0,
+  "providers": {
+   "Reka": 265,
+   "DeepInfra": 147,
+   "Alibaba": 153,
+   "Venice": 71,
+   "SiliconFlow": 36,
+   "Phala": 3
+  },
+  "roles": {
+   "planner": {
+    "repairs_per_case": 0.9703703703703703,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 3310.740740740741,
+    "in_tokens_per_case": 3923.0074074074073
+   },
+   "reviewer": {
+    "repairs_per_case": 0.9629629629629629,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 8270.133333333333,
+    "in_tokens_per_case": 5129.081481481481
+   },
+   "walkthrough": {
+    "repairs_per_case": 0.06666666666666667,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 1967.148148148148,
+    "in_tokens_per_case": 3631.614814814815
+   }
+  },
+  "strict_min": 0.36666666666666664,
+  "strict_max": 0.43333333333333335,
+  "reps": 3,
+  "hosted": true,
+  "usd_per_review": 0.04024513274074074,
+  "deployable": true,
+  "lemmy": "Q4_K_M 16.8 GB, 1xP40",
+  "phase": "openrouter",
+  "label": "or:qwen3.6-27b",
+  "gpu": {}
+ },
+ {
+  "cases": 135,
+  "strict": 0.4111111111111111,
+  "detected": 0.5555555555555556,
+  "lenient": 0.4777777777777778,
+  "line_err_med": 1.0,
+  "noise": 4.2,
+  "noise_hi": 1.0222222222222221,
+  "extra_on_planted": 3.2888888888888888,
+  "calib_mae": 0.716036036036036,
+  "mean_conf": 0.8187931034482758,
+  "ok": 0.9703703703703703,
+  "repairs": 1.9037037037037037,
+  "p50_s": 39.931,
+  "p95_s": 89.11249999999998,
+  "over_prod": 0.02962962962962963,
+  "pp_tps": null,
+  "tg_tps": null,
+  "reason_kchars": 0.0,
+  "fail_stages": {
+   "planner": 2,
+   "reviewer": 2
+  },
+  "by_family": {
+   "correctness": 0.38596491228070173,
+   "security": 0.8484848484848485
+  },
+  "by_op": {
+   "bool_flip": "6/15",
+   "cmp_flip": "12/15",
+   "drop_await": "2/15",
+   "hardcoded_secret": "19/24",
+   "return_flip": "2/12",
+   "tls_off": "9/9"
+  },
+  "wall_h": 2.2417233333333333,
+  "billed_usd": 0.64584809,
+  "retries": 0,
+  "providers": {
+   "AkashML": 249,
+   "DeepInfra": 264,
+   "Parasail": 87,
+   "CoreWeave": 30,
+   "AtlasCloud": 3,
+   "DekaLLM": 17,
+   "SiliconFlow": 2
+  },
+  "roles": {
+   "planner": {
+    "repairs_per_case": 0.9481481481481482,
+    "fail_rate": 0.014814814814814815,
+    "out_tokens_per_case": 451.97037037037035,
+    "in_tokens_per_case": 3844.637037037037
+   },
+   "reviewer": {
+    "repairs_per_case": 0.9555555555555556,
+    "fail_rate": 0.014814814814814815,
+    "out_tokens_per_case": 2932.785185185185,
+    "in_tokens_per_case": 5366.77037037037
+   },
+   "walkthrough": {
+    "repairs_per_case": 0.0,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 269.9037037037037,
+    "in_tokens_per_case": 3483.748148148148
+   }
+  },
+  "strict_min": 0.36666666666666664,
+  "strict_max": 0.4666666666666667,
+  "reps": 3,
+  "hosted": true,
+  "usd_per_review": 0.004784059925925926,
+  "deployable": true,
+  "lemmy": "IQ4_XS 17.7 GB, 1xP40",
+  "phase": "openrouter",
+  "label": "or:qwen3.6-35b-a3b+think-off",
+  "gpu": {}
+ },
+ {
+  "cases": 135,
+  "strict": 0.4,
+  "detected": 0.6555555555555556,
+  "lenient": 0.4666666666666667,
+  "line_err_med": 2,
+  "noise": 3.9555555555555557,
+  "noise_hi": 0.6666666666666666,
+  "extra_on_planted": 3.022222222222222,
+  "calib_mae": 0.7633116883116883,
+  "mean_conf": 0.8693415637860082,
+  "ok": 0.9851851851851852,
+  "repairs": 1.9481481481481482,
+  "p50_s": 169.242,
+  "p95_s": 271.76980000000003,
+  "over_prod": 0.044444444444444446,
+  "pp_tps": null,
+  "tg_tps": null,
+  "reason_kchars": 51.91764444444444,
+  "fail_stages": {
+   "reviewer": 2
+  },
+  "by_family": {
+   "correctness": 0.5964912280701754,
+   "security": 0.7575757575757576
+  },
+  "by_op": {
+   "bool_flip": "10/15",
+   "cmp_flip": "11/15",
+   "drop_await": "6/15",
+   "hardcoded_secret": "17/24",
+   "return_flip": "7/12",
+   "tls_off": "8/9"
+  },
+  "wall_h": 6.505167777777777,
+  "billed_usd": 2.19289482,
+  "retries": 0,
+  "providers": {
+   "DeepInfra": 283,
+   "AkashML": 252,
+   "Parasail": 77,
+   "CoreWeave": 32,
+   "AtlasCloud": 3,
+   "DekaLLM": 15,
+   "Darkbloom": 1,
+   "SiliconFlow": 1
+  },
+  "roles": {
+   "planner": {
+    "repairs_per_case": 0.9777777777777777,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 4189.325925925926,
+    "in_tokens_per_case": 3884.4
+   },
+   "reviewer": {
+    "repairs_per_case": 0.9703703703703703,
+    "fail_rate": 0.014814814814814815,
+    "out_tokens_per_case": 9736.281481481481,
+    "in_tokens_per_case": 4961.577777777778
+   },
+   "walkthrough": {
+    "repairs_per_case": 0.0,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 1957.0814814814814,
+    "in_tokens_per_case": 3508.2444444444445
+   }
+  },
+  "strict_min": 0.36666666666666664,
+  "strict_max": 0.43333333333333335,
+  "reps": 3,
+  "hosted": true,
+  "usd_per_review": 0.01624366533333333,
+  "deployable": true,
+  "lemmy": "IQ4_XS 17.7 GB, 1xP40",
+  "phase": "openrouter",
+  "label": "or:qwen3.6-35b-a3b",
+  "gpu": {}
+ },
+ {
+  "cases": 135,
+  "strict": 0.37777777777777777,
+  "detected": 0.7666666666666667,
+  "lenient": 0.43333333333333335,
+  "line_err_med": 2,
+  "noise": 4.488888888888889,
+  "noise_hi": 0.3333333333333333,
+  "extra_on_planted": 3.8666666666666667,
+  "calib_mae": 0.7592931937172775,
+  "mean_conf": 0.8265582191780821,
+  "ok": 1.0,
+  "repairs": 1.6962962962962962,
+  "p50_s": 109.811,
+  "p95_s": 419.23679999999996,
+  "over_prod": 0.18518518518518517,
+  "pp_tps": null,
+  "tg_tps": null,
+  "reason_kchars": 24.732170370370373,
+  "fail_stages": {},
+  "by_family": {
+   "correctness": 0.7017543859649122,
+   "security": 0.8787878787878788
+  },
+  "by_op": {
+   "bool_flip": "15/15",
+   "cmp_flip": "13/15",
+   "drop_await": "10/15",
+   "hardcoded_secret": "20/24",
+   "return_flip": "2/12",
+   "tls_off": "9/9"
+  },
+  "wall_h": 5.711430833333333,
+  "billed_usd": 1.84026886,
+  "retries": 0,
+  "providers": {
+   "Together": 314,
+   "DeepInfra": 320
+  },
+  "roles": {
+   "planner": {
+    "repairs_per_case": 0.9555555555555556,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 2184.0814814814817,
+    "in_tokens_per_case": 3625.748148148148
+   },
+   "reviewer": {
+    "repairs_per_case": 0.7407407407407407,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 5204.525925925926,
+    "in_tokens_per_case": 4512.355555555556
+   },
+   "walkthrough": {
+    "repairs_per_case": 0.0,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 652.162962962963,
+    "in_tokens_per_case": 3289.266666666667
+   }
+  },
+  "strict_min": 0.36666666666666664,
+  "strict_max": 0.4,
+  "reps": 3,
+  "hosted": true,
+  "usd_per_review": 0.013631621185185185,
+  "deployable": true,
+  "lemmy": "UD-Q4_K_XL 15.9 GB, 1xP40",
+  "phase": "openrouter",
+  "label": "or:muse-glimmer-30b",
+  "gpu": {}
+ },
+ {
+  "cases": 135,
+  "strict": 0.3111111111111111,
+  "detected": 0.6111111111111112,
+  "lenient": 0.32222222222222224,
+  "line_err_med": 2,
+  "noise": 1.5555555555555556,
+  "noise_hi": 0.35555555555555557,
+  "extra_on_planted": 1.6,
+  "calib_mae": 0.734593023255814,
+  "mean_conf": 0.8832644628099173,
+  "ok": 1.0,
+  "repairs": 1.288888888888889,
+  "p50_s": 35.287,
+  "p95_s": 64.8753,
+  "over_prod": 0.0,
+  "pp_tps": null,
+  "tg_tps": null,
+  "reason_kchars": 0.0,
+  "fail_stages": {},
+  "by_family": {
+   "correctness": 0.43859649122807015,
+   "security": 0.9090909090909091
+  },
+  "by_op": {
+   "bool_flip": "9/15",
+   "cmp_flip": "12/15",
+   "drop_await": "3/15",
+   "hardcoded_secret": "21/24",
+   "return_flip": "1/12",
+   "tls_off": "9/9"
+  },
+  "wall_h": 1.4252252777777779,
+  "billed_usd": 0.2592411,
+  "retries": 0,
+  "providers": {
+   "CoreWeave": 382,
+   "DeepInfra": 195,
+   "ModelRun": 2
+  },
+  "roles": {
+   "planner": {
+    "repairs_per_case": 0.7851851851851852,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 366.23703703703706,
+    "in_tokens_per_case": 4081.9777777777776
+   },
+   "reviewer": {
+    "repairs_per_case": 0.5037037037037037,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 788.5259259259259,
+    "in_tokens_per_case": 4517.533333333334
+   },
+   "walkthrough": {
+    "repairs_per_case": 0.0,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 204.76296296296297,
+    "in_tokens_per_case": 3878.4
+   }
+  },
+  "strict_min": 0.3,
+  "strict_max": 0.3333333333333333,
+  "reps": 3,
+  "hosted": true,
+  "usd_per_review": 0.0019203044444444444,
+  "deployable": true,
+  "lemmy": "Q4_K_M 18.3 GB, 1xP40",
+  "phase": "openrouter",
+  "label": "or:gemma-4-31b",
+  "gpu": {}
+ },
+ {
+  "cases": 135,
+  "strict": 0.2777777777777778,
+  "detected": 0.5888888888888889,
+  "lenient": 0.3111111111111111,
+  "line_err_med": 3,
+  "noise": 1.6222222222222222,
+  "noise_hi": 0.35555555555555557,
+  "extra_on_planted": 1.6888888888888889,
+  "calib_mae": 0.7615254237288135,
+  "mean_conf": 0.88396,
+  "ok": 1.0,
+  "repairs": 1.2592592592592593,
+  "p50_s": 33.539,
+  "p95_s": 72.9261,
+  "over_prod": 0.0,
+  "pp_tps": null,
+  "tg_tps": null,
+  "reason_kchars": 0.0,
+  "fail_stages": {},
+  "by_family": {
+   "correctness": 0.42105263157894735,
+   "security": 0.8787878787878788
+  },
+  "by_op": {
+   "bool_flip": "8/15",
+   "cmp_flip": "10/15",
+   "drop_await": "3/15",
+   "hardcoded_secret": "20/24",
+   "return_flip": "3/12",
+   "tls_off": "9/9"
+  },
+  "wall_h": 1.4220625,
+  "billed_usd": 0.258897889,
+  "retries": 0,
+  "providers": {
+   "CoreWeave": 387,
+   "DeepInfra": 186,
+   "ModelRun": 1,
+   "Io Net": 1
+  },
+  "roles": {
+   "planner": {
+    "repairs_per_case": 0.7851851851851852,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 360.24444444444447,
+    "in_tokens_per_case": 4079.288888888889
+   },
+   "reviewer": {
+    "repairs_per_case": 0.4740740740740741,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 824.4148148148148,
+    "in_tokens_per_case": 4518.77037037037
+   },
+   "walkthrough": {
+    "repairs_per_case": 0.0,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 205.8148148148148,
+    "in_tokens_per_case": 3878.4
+   }
+  },
+  "strict_min": 0.26666666666666666,
+  "strict_max": 0.3,
+  "reps": 3,
+  "hosted": true,
+  "usd_per_review": 0.0019177621407407406,
+  "deployable": true,
+  "lemmy": "Q4_K_M 18.3 GB, 1xP40",
+  "phase": "openrouter",
+  "label": "or:gemma-4-31b+think-off",
+  "gpu": {}
+ },
+ {
+  "cases": 135,
+  "strict": 0.2777777777777778,
+  "detected": 0.5333333333333333,
+  "lenient": 0.37777777777777777,
+  "line_err_med": 1.0,
+  "noise": 4.688888888888889,
+  "noise_hi": 0.9333333333333333,
+  "extra_on_planted": 3.6666666666666665,
+  "calib_mae": 0.7811267605633803,
+  "mean_conf": 0.8439929328621908,
+  "ok": 1.0,
+  "repairs": 1.3777777777777778,
+  "p50_s": 64.298,
+  "p95_s": 136.306,
+  "over_prod": 0.0,
+  "pp_tps": null,
+  "tg_tps": null,
+  "reason_kchars": 0.0,
+  "fail_stages": {},
+  "by_family": {
+   "correctness": 0.42105263157894735,
+   "security": 0.7272727272727273
+  },
+  "by_op": {
+   "bool_flip": "5/15",
+   "cmp_flip": "15/15",
+   "drop_await": "4/15",
+   "hardcoded_secret": "15/24",
+   "return_flip": "0/12",
+   "tls_off": "9/9"
+  },
+  "wall_h": 2.7966019444444443,
+  "billed_usd": 0.16624293,
+  "retries": 0,
+  "providers": {
+   "SiliconFlow": 591
+  },
+  "roles": {
+   "planner": {
+    "repairs_per_case": 1.0148148148148148,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 341.5925925925926,
+    "in_tokens_per_case": 3624.266666666667
+   },
+   "reviewer": {
+    "repairs_per_case": 0.362962962962963,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 1112.3111111111111,
+    "in_tokens_per_case": 3947.0
+   },
+   "walkthrough": {
+    "repairs_per_case": 0.0,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 205.62962962962962,
+    "in_tokens_per_case": 3382.4444444444443
+   }
+  },
+  "strict_min": 0.23333333333333334,
+  "strict_max": 0.3333333333333333,
+  "reps": 3,
+  "hosted": true,
+  "usd_per_review": 0.0012314291111111112,
+  "deployable": true,
+  "lemmy": "IQ4_XS 16.4 GB, 1xP40",
+  "phase": "openrouter",
+  "label": "or:qwen3-coder-30b-a3b",
+  "gpu": {}
+ },
+ {
+  "cases": 135,
+  "strict": 0.2222222222222222,
+  "detected": 0.4777777777777778,
+  "lenient": 0.37777777777777777,
+  "line_err_med": 1,
+  "noise": 4.266666666666667,
+  "noise_hi": 0.5111111111111111,
+  "extra_on_planted": 3.0555555555555554,
+  "calib_mae": 0.7884067796610169,
+  "mean_conf": 0.8381519507186859,
+  "ok": 0.9925925925925926,
+  "repairs": 0.007407407407407408,
+  "p50_s": 47.795,
+  "p95_s": 89.02749999999999,
+  "over_prod": 0.007407407407407408,
+  "pp_tps": null,
+  "tg_tps": null,
+  "reason_kchars": 0.0,
+  "fail_stages": {
+   "reviewer": 1
+  },
+  "by_family": {
+   "correctness": 0.3333333333333333,
+   "security": 0.7272727272727273
+  },
+  "by_op": {
+   "bool_flip": "3/15",
+   "cmp_flip": "14/15",
+   "drop_await": "2/15",
+   "hardcoded_secret": "15/24",
+   "return_flip": "0/12",
+   "tls_off": "9/9"
+  },
+  "wall_h": 2.1181994444444445,
+  "billed_usd": 0.13767327,
+  "retries": 1,
+  "providers": {
+   "SiliconFlow": 404
+  },
+  "roles": {
+   "planner": {
+    "repairs_per_case": 0.0,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 142.86666666666667,
+    "in_tokens_per_case": 3361.4444444444443
+   },
+   "reviewer": {
+    "repairs_per_case": 0.007407407407407408,
+    "fail_rate": 0.007407407407407408,
+    "out_tokens_per_case": 707.0222222222222,
+    "in_tokens_per_case": 3681.6444444444446
+   },
+   "walkthrough": {
+    "repairs_per_case": 0.0,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 202.0,
+    "in_tokens_per_case": 3317.9555555555557
+   }
+  },
+  "strict_min": 0.16666666666666666,
+  "strict_max": 0.26666666666666666,
+  "reps": 3,
+  "hosted": true,
+  "usd_per_review": 0.001019802,
+  "deployable": true,
+  "lemmy": "IQ4_XS 16.4 GB, 1xP40",
+  "phase": "openrouter",
+  "label": "or:qwen3-coder-30b-a3b+typed-prompt",
+  "gpu": {}
+ },
+ {
+  "cases": 135,
+  "strict": 0.2222222222222222,
+  "detected": 0.43333333333333335,
+  "lenient": 0.32222222222222224,
+  "line_err_med": 1,
+  "noise": 3.688888888888889,
+  "noise_hi": 1.2666666666666666,
+  "extra_on_planted": 3.488888888888889,
+  "calib_mae": 0.8154191616766467,
+  "mean_conf": 0.86428,
+  "ok": 0.9259259259259259,
+  "repairs": 0.06666666666666667,
+  "p50_s": 42.857,
+  "p95_s": 604.1198,
+  "over_prod": 0.08888888888888889,
+  "pp_tps": null,
+  "tg_tps": null,
+  "reason_kchars": 0.0,
+  "fail_stages": {
+   "reviewer": 10
+  },
+  "by_family": {
+   "correctness": 0.2807017543859649,
+   "security": 0.696969696969697
+  },
+  "by_op": {
+   "bool_flip": "7/15",
+   "cmp_flip": "8/15",
+   "drop_await": "1/15",
+   "hardcoded_secret": "14/24",
+   "return_flip": "0/12",
+   "tls_off": "9/9"
+  },
+  "wall_h": 3.3730605555555555,
+  "billed_usd": 0.157065074,
+  "retries": 0,
+  "providers": {
+   "Cloudflare": 382,
+   "Novita": 12
+  },
+  "roles": {
+   "planner": {
+    "repairs_per_case": 0.0,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 149.16296296296295,
+    "in_tokens_per_case": 3255.222222222222
+   },
+   "reviewer": {
+    "repairs_per_case": 0.06666666666666667,
+    "fail_rate": 0.07407407407407407,
+    "out_tokens_per_case": 1138.8148148148148,
+    "in_tokens_per_case": 3407.8074074074075
+   },
+   "walkthrough": {
+    "repairs_per_case": 0.0,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 173.8074074074074,
+    "in_tokens_per_case": 2866.311111111111
+   }
+  },
+  "strict_min": 0.2,
+  "strict_max": 0.23333333333333334,
+  "reps": 3,
+  "hosted": true,
+  "usd_per_review": 0.0011634449925925926,
+  "deployable": true,
+  "lemmy": "Q4_K_M 18.3 GB, 1xP40",
+  "phase": "openrouter",
+  "label": "or:glm-4.7-flash+think-off+typed-prompt",
+  "gpu": {}
+ },
+ {
+  "cases": 135,
+  "strict": 0.2111111111111111,
+  "detected": 0.5222222222222223,
+  "lenient": 0.2777777777777778,
+  "line_err_med": 4,
+  "noise": 3,
+  "noise_hi": 0.6666666666666666,
+  "extra_on_planted": 2.811111111111111,
+  "calib_mae": 0.7755147058823529,
+  "mean_conf": 0.8374938574938575,
+  "ok": 0.9259259259259259,
+  "repairs": 2.2222222222222223,
+  "p50_s": 57.354,
+  "p95_s": 149.32539999999997,
+  "over_prod": 0.037037037037037035,
+  "pp_tps": null,
+  "tg_tps": null,
+  "reason_kchars": 10.4816,
+  "fail_stages": {
+   "planner": 1,
+   "reviewer": 9
+  },
+  "by_family": {
+   "correctness": 0.40350877192982454,
+   "security": 0.7272727272727273
+  },
+  "by_op": {
+   "bool_flip": "6/15",
+   "cmp_flip": "9/15",
+   "drop_await": "7/15",
+   "hardcoded_secret": "15/24",
+   "return_flip": "1/12",
+   "tls_off": "9/9"
+  },
+  "wall_h": 2.899205,
+  "billed_usd": 0.206779144,
+  "retries": 0,
+  "providers": {
+   "CoreWeave": 92,
+   "Novita": 25,
+   "AkashML": 84,
+   "Mancer 2": 35,
+   "Near AI": 215,
+   "DekaLLM": 86,
+   "Crusoe": 30,
+   "BaseTen": 14,
+   "DeepInfra": 66,
+   "Parasail": 18,
+   "Groq": 3,
+   "Together": 4,
+   "Nebius": 7,
+   "Phala": 4,
+   "SiliconFlow": 3,
+   "Mara": 4
+  },
+  "roles": {
+   "planner": {
+    "repairs_per_case": 1.1407407407407408,
+    "fail_rate": 0.007407407407407408,
+    "out_tokens_per_case": 1175.2518518518518,
+    "in_tokens_per_case": 3826.1111111111113
+   },
+   "reviewer": {
+    "repairs_per_case": 1.0814814814814815,
+    "fail_rate": 0.06666666666666667,
+    "out_tokens_per_case": 3353.9851851851854,
+    "in_tokens_per_case": 4836.844444444445
+   },
+   "walkthrough": {
+    "repairs_per_case": 0.0,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 388.6222222222222,
+    "in_tokens_per_case": 3034.82962962963
+   }
+  },
+  "strict_min": 0.16666666666666666,
+  "strict_max": 0.26666666666666666,
+  "reps": 3,
+  "hosted": true,
+  "usd_per_review": 0.001531697362962963,
+  "deployable": true,
+  "lemmy": "MXFP4 63.4 GB, 2xP40 +CPU offload",
+  "phase": "openrouter",
+  "label": "or:gpt-oss-120b",
+  "gpu": {}
+ },
+ {
+  "cases": 135,
+  "strict": 0.2,
+  "detected": 0.5111111111111111,
+  "lenient": 0.26666666666666666,
+  "line_err_med": 3.0,
+  "noise": 2.088888888888889,
+  "noise_hi": 0.3111111111111111,
+  "extra_on_planted": 2.3666666666666667,
+  "calib_mae": 0.8148051948051948,
+  "mean_conf": 0.8753538461538461,
+  "ok": 1.0,
+  "repairs": 1.8222222222222222,
+  "p50_s": 25.144,
+  "p95_s": 58.506899999999995,
+  "over_prod": 0.007407407407407408,
+  "pp_tps": null,
+  "tg_tps": null,
+  "reason_kchars": 0.0,
+  "fail_stages": {},
+  "by_family": {
+   "correctness": 0.3508771929824561,
+   "security": 0.7878787878787878
+  },
+  "by_op": {
+   "bool_flip": "8/15",
+   "cmp_flip": "12/15",
+   "drop_await": "0/15",
+   "hardcoded_secret": "17/24",
+   "return_flip": "0/12",
+   "tls_off": "9/9"
+  },
+  "wall_h": 1.1980938888888888,
+  "billed_usd": 0.2230459605,
+  "retries": 0,
+  "providers": {
+   "DekaLLM": 101,
+   "Cloudflare": 42,
+   "Google": 8,
+   "Darkbloom": 142,
+   "NextBit": 93,
+   "SiliconFlow": 21,
+   "Makora": 108,
+   "CoreWeave": 41,
+   "Venice": 21,
+   "DeepInfra": 52,
+   "Parasail": 12,
+   "Novita": 10
+  },
+  "roles": {
+   "planner": {
+    "repairs_per_case": 1.0,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 396.1925925925926,
+    "in_tokens_per_case": 4172.214814814814
+   },
+   "reviewer": {
+    "repairs_per_case": 0.762962962962963,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 2202.0814814814817,
+    "in_tokens_per_case": 4847.637037037037
+   },
+   "walkthrough": {
+    "repairs_per_case": 0.05925925925925926,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 220.73333333333332,
+    "in_tokens_per_case": 3902.0814814814817
+   }
+  },
+  "strict_min": 0.13333333333333333,
+  "strict_max": 0.23333333333333334,
+  "reps": 3,
+  "hosted": true,
+  "usd_per_review": 0.0016521923,
+  "deployable": true,
+  "lemmy": "Q4_K_M 16.9 GB, 1xP40",
+  "phase": "openrouter",
+  "label": "or:gemma-4-26b-a4b+think-off",
+  "gpu": {}
+ },
+ {
+  "cases": 135,
+  "strict": 0.2,
+  "detected": 0.4,
+  "lenient": 0.2777777777777778,
+  "line_err_med": 2.5,
+  "noise": 1.8444444444444446,
+  "noise_hi": 0.4666666666666667,
+  "extra_on_planted": 1.8888888888888888,
+  "calib_mae": 0.770904255319149,
+  "mean_conf": 0.8442066420664207,
+  "ok": 0.9925925925925926,
+  "repairs": 0.14814814814814814,
+  "p50_s": 17.096,
+  "p95_s": 51.09959999999998,
+  "over_prod": 0.014814814814814815,
+  "pp_tps": null,
+  "tg_tps": null,
+  "reason_kchars": 0.0,
+  "fail_stages": {
+   "reviewer": 1
+  },
+  "by_family": {
+   "correctness": 0.3157894736842105,
+   "security": 0.5454545454545454
+  },
+  "by_op": {
+   "bool_flip": "4/15",
+   "cmp_flip": "12/15",
+   "drop_await": "2/15",
+   "hardcoded_secret": "9/24",
+   "return_flip": "0/12",
+   "tls_off": "9/9"
+  },
+  "wall_h": 1.0593577777777778,
+  "billed_usd": 0.1849588085,
+  "retries": 0,
+  "providers": {
+   "DekaLLM": 55,
+   "Makora": 107,
+   "NextBit": 45,
+   "Venice": 7,
+   "Cloudflare": 37,
+   "Parasail": 12,
+   "Darkbloom": 87,
+   "DeepInfra": 35,
+   "CoreWeave": 23,
+   "SiliconFlow": 10,
+   "Google": 4,
+   "Novita": 1
+  },
+  "roles": {
+   "planner": {
+    "repairs_per_case": 0.0,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 141.74074074074073,
+    "in_tokens_per_case": 3877.4148148148147
+   },
+   "reviewer": {
+    "repairs_per_case": 0.1037037037037037,
+    "fail_rate": 0.007407407407407408,
+    "out_tokens_per_case": 1612.7703703703703,
+    "in_tokens_per_case": 4311.666666666667
+   },
+   "walkthrough": {
+    "repairs_per_case": 0.044444444444444446,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 216.1851851851852,
+    "in_tokens_per_case": 3869.8814814814814
+   }
+  },
+  "strict_min": 0.2,
+  "strict_max": 0.2,
+  "reps": 3,
+  "hosted": true,
+  "usd_per_review": 0.001370065248148148,
+  "deployable": true,
+  "lemmy": "Q4_K_M 16.9 GB, 1xP40",
+  "phase": "openrouter",
+  "label": "or:gemma-4-26b-a4b+think-off+typed-prompt",
+  "gpu": {}
+ },
+ {
+  "cases": 135,
+  "strict": 0.16666666666666666,
+  "detected": 0.4444444444444444,
+  "lenient": 0.23333333333333334,
+  "line_err_med": 3.0,
+  "noise": 2.1777777777777776,
+  "noise_hi": 0.4444444444444444,
+  "extra_on_planted": 2.3444444444444446,
+  "calib_mae": 0.830353982300885,
+  "mean_conf": 0.8836111111111111,
+  "ok": 1.0,
+  "repairs": 1.8222222222222222,
+  "p50_s": 24.874,
+  "p95_s": 43.29729999999999,
+  "over_prod": 0.0,
+  "pp_tps": null,
+  "tg_tps": null,
+  "reason_kchars": 0.0,
+  "fail_stages": {},
+  "by_family": {
+   "correctness": 0.2807017543859649,
+   "security": 0.7272727272727273
+  },
+  "by_op": {
+   "bool_flip": "5/15",
+   "cmp_flip": "11/15",
+   "drop_await": "0/15",
+   "hardcoded_secret": "15/24",
+   "return_flip": "0/12",
+   "tls_off": "9/9"
+  },
+  "wall_h": 1.0110375,
+  "billed_usd": 0.1906308675,
+  "retries": 0,
+  "providers": {
+   "DekaLLM": 119,
+   "CoreWeave": 39,
+   "Makora": 88,
+   "Cloudflare": 28,
+   "SiliconFlow": 25,
+   "Darkbloom": 151,
+   "Parasail": 22,
+   "NextBit": 85,
+   "DeepInfra": 58,
+   "Venice": 17,
+   "Novita": 8,
+   "Google": 11
+  },
+  "roles": {
+   "planner": {
+    "repairs_per_case": 1.0,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 398.48148148148147,
+    "in_tokens_per_case": 4179.0888888888885
+   },
+   "reviewer": {
+    "repairs_per_case": 0.7407407407407407,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 1245.1925925925925,
+    "in_tokens_per_case": 4830.503703703704
+   },
+   "walkthrough": {
+    "repairs_per_case": 0.08148148148148149,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 230.22222222222223,
+    "in_tokens_per_case": 3912.9555555555557
+   }
+  },
+  "strict_min": 0.13333333333333333,
+  "strict_max": 0.2,
+  "reps": 3,
+  "hosted": true,
+  "usd_per_review": 0.0014120805,
+  "deployable": true,
+  "lemmy": "Q4_K_M 16.9 GB, 1xP40",
+  "phase": "openrouter",
+  "label": "or:gemma-4-26b-a4b",
+  "gpu": {}
+ },
+ {
+  "cases": 135,
+  "strict": 0.14444444444444443,
+  "detected": 0.3888888888888889,
+  "lenient": 0.2111111111111111,
+  "line_err_med": 4,
+  "noise": 2.577777777777778,
+  "noise_hi": 0.4666666666666667,
+  "extra_on_planted": 2.0444444444444443,
+  "calib_mae": 0.7908121827411168,
+  "mean_conf": 0.840926517571885,
+  "ok": 0.9111111111111111,
+  "repairs": 2.2888888888888888,
+  "p50_s": 30.963,
+  "p95_s": 58.15379999999999,
+  "over_prod": 0.022222222222222223,
+  "pp_tps": null,
+  "tg_tps": null,
+  "reason_kchars": 2.0203777777777776,
+  "fail_stages": {
+   "planner": 1,
+   "reviewer": 11
+  },
+  "by_family": {
+   "correctness": 0.3157894736842105,
+   "security": 0.5151515151515151
+  },
+  "by_op": {
+   "bool_flip": "5/15",
+   "cmp_flip": "7/15",
+   "drop_await": "6/15",
+   "hardcoded_secret": "12/24",
+   "return_flip": "0/12",
+   "tls_off": "5/9"
+  },
+  "wall_h": 1.6720038888888888,
+  "billed_usd": 0.135794798,
+  "retries": 0,
+  "providers": {
+   "CoreWeave": 86,
+   "DeepInfra": 65,
+   "AkashML": 97,
+   "Novita": 28,
+   "Near AI": 189,
+   "DekaLLM": 102,
+   "Crusoe": 33,
+   "SiliconFlow": 6,
+   "Parasail": 23,
+   "Mancer 2": 35,
+   "Groq": 4,
+   "BaseTen": 17,
+   "Mara": 2,
+   "Together": 4,
+   "Phala": 6,
+   "Nebius": 3
+  },
+  "roles": {
+   "planner": {
+    "repairs_per_case": 1.125925925925926,
+    "fail_rate": 0.007407407407407408,
+    "out_tokens_per_case": 566.1925925925926,
+    "in_tokens_per_case": 3713.133333333333
+   },
+   "reviewer": {
+    "repairs_per_case": 1.162962962962963,
+    "fail_rate": 0.08148148148148149,
+    "out_tokens_per_case": 2644.8444444444444,
+    "in_tokens_per_case": 4652.488888888889
+   },
+   "walkthrough": {
+    "repairs_per_case": 0.0,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 247.42222222222222,
+    "in_tokens_per_case": 3011.696296296296
+   }
+  },
+  "strict_min": 0.1,
+  "strict_max": 0.2,
+  "reps": 3,
+  "hosted": true,
+  "usd_per_review": 0.0010058873925925926,
+  "deployable": true,
+  "lemmy": "MXFP4 63.4 GB, 2xP40 +CPU offload",
+  "phase": "openrouter",
+  "label": "or:gpt-oss-120b+think-low",
+  "gpu": {}
+ },
+ {
+  "cases": 135,
+  "strict": 0.1111111111111111,
+  "detected": 0.18888888888888888,
+  "lenient": 0.16666666666666666,
+  "line_err_med": 1,
+  "noise": 2.066666666666667,
+  "noise_hi": 0.13333333333333333,
+  "extra_on_planted": 2.011111111111111,
+  "calib_mae": 0.7809947643979058,
+  "mean_conf": 0.8086971830985915,
+  "ok": 0.9481481481481482,
+  "repairs": 1.9925925925925927,
+  "p50_s": 43.524,
+  "p95_s": 78.91499999999999,
+  "over_prod": 0.0,
+  "pp_tps": null,
+  "tg_tps": null,
+  "reason_kchars": 0.0,
+  "fail_stages": {
+   "planner": 2,
+   "reviewer": 5
+  },
+  "by_family": {
+   "correctness": 0.08771929824561403,
+   "security": 0.36363636363636365
+  },
+  "by_op": {
+   "bool_flip": "2/15",
+   "cmp_flip": "2/15",
+   "drop_await": "0/15",
+   "hardcoded_secret": "6/24",
+   "return_flip": "1/12",
+   "tls_off": "6/9"
+  },
+  "wall_h": 1.7178830555555555,
+  "billed_usd": 0.283869836,
+  "retries": 0,
+  "providers": {
+   "DeepInfra": 358,
+   "AkashML": 157,
+   "Parasail": 84,
+   "SambaNova": 18,
+   "Cloudflare": 25,
+   "CoreWeave": 9,
+   "Groq": 10
+  },
+  "roles": {
+   "planner": {
+    "repairs_per_case": 1.0296296296296297,
+    "fail_rate": 0.014814814814814815,
+    "out_tokens_per_case": 123.11111111111111,
+    "in_tokens_per_case": 3322.185185185185
+   },
+   "reviewer": {
+    "repairs_per_case": 0.9407407407407408,
+    "fail_rate": 0.037037037037037035,
+    "out_tokens_per_case": 692.1333333333333,
+    "in_tokens_per_case": 3697.9407407407407
+   },
+   "walkthrough": {
+    "repairs_per_case": 0.022222222222222223,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 202.17037037037036,
+    "in_tokens_per_case": 3030.866666666667
+   }
+  },
+  "strict_min": 0.03333333333333333,
+  "strict_max": 0.2,
+  "reps": 3,
+  "hosted": true,
+  "usd_per_review": 0.002102739525925926,
+  "deployable": true,
+  "lemmy": "Q4_K_M 42.5 GB, 2xP40",
+  "phase": "openrouter",
+  "label": "or:llama-3.3-70b",
+  "gpu": {}
+ },
+ {
+  "cases": 135,
+  "strict": 0.07777777777777778,
+  "detected": 0.17777777777777778,
+  "lenient": 0.13333333333333333,
+  "line_err_med": 5.0,
+  "noise": 2.3555555555555556,
+  "noise_hi": 0,
+  "extra_on_planted": 2.188888888888889,
+  "calib_mae": 0.7749509803921569,
+  "mean_conf": 0.8060967741935484,
+  "ok": 0.9629629629629629,
+  "repairs": 0.1259259259259259,
+  "p50_s": 33.095,
+  "p95_s": 74.90639999999999,
+  "over_prod": 0.0,
+  "pp_tps": null,
+  "tg_tps": null,
+  "reason_kchars": 0.0,
+  "fail_stages": {
+   "planner": 2,
+   "reviewer": 3
+  },
+  "by_family": {
+   "correctness": 0.08771929824561403,
+   "security": 0.3333333333333333
+  },
+  "by_op": {
+   "bool_flip": "2/15",
+   "cmp_flip": "3/15",
+   "drop_await": "0/15",
+   "hardcoded_secret": "5/24",
+   "return_flip": "0/12",
+   "tls_off": "6/9"
+  },
+  "wall_h": 1.3633041666666668,
+  "billed_usd": 0.267018013,
+  "retries": 0,
+  "providers": {
+   "AkashML": 169,
+   "DeepInfra": 182,
+   "CoreWeave": 6,
+   "Cloudflare": 13,
+   "SambaNova": 5,
+   "Parasail": 30,
+   "Groq": 5
+  },
+  "roles": {
+   "planner": {
+    "repairs_per_case": 0.0,
+    "fail_rate": 0.014814814814814815,
+    "out_tokens_per_case": 86.37037037037037,
+    "in_tokens_per_case": 3170.5925925925926
+   },
+   "reviewer": {
+    "repairs_per_case": 0.1259259259259259,
+    "fail_rate": 0.022222222222222223,
+    "out_tokens_per_case": 381.8296296296296,
+    "in_tokens_per_case": 3451.392592592593
+   },
+   "walkthrough": {
+    "repairs_per_case": 0.0,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 194.62222222222223,
+    "in_tokens_per_case": 3088.562962962963
+   }
+  },
+  "strict_min": 0.06666666666666667,
+  "strict_max": 0.1,
+  "reps": 3,
+  "hosted": true,
+  "usd_per_review": 0.0019779112074074074,
+  "deployable": true,
+  "lemmy": "Q4_K_M 42.5 GB, 2xP40",
+  "phase": "openrouter",
+  "label": "or:llama-3.3-70b+typed-prompt",
+  "gpu": {}
+ },
+ {
+  "cases": 135,
+  "strict": 0.06666666666666667,
+  "detected": 0.28888888888888886,
+  "lenient": 0.1,
+  "line_err_med": 6.5,
+  "noise": 0.6666666666666666,
+  "noise_hi": 0.17777777777777778,
+  "extra_on_planted": 1.2666666666666666,
+  "calib_mae": 0.81775,
+  "mean_conf": 0.8518,
+  "ok": 0.9555555555555556,
+  "repairs": 0.34074074074074073,
+  "p50_s": 23.462,
+  "p95_s": 209.20489999999975,
+  "over_prod": 0.08888888888888889,
+  "pp_tps": null,
+  "tg_tps": null,
+  "reason_kchars": 2.6168,
+  "fail_stages": {
+   "planner": 1,
+   "reviewer": 5
+  },
+  "by_family": {
+   "correctness": 0.3333333333333333,
+   "security": 0.21212121212121213
+  },
+  "by_op": {
+   "bool_flip": "5/15",
+   "cmp_flip": "6/15",
+   "drop_await": "8/15",
+   "hardcoded_secret": "4/24",
+   "return_flip": "0/12",
+   "tls_off": "3/9"
+  },
+  "wall_h": 2.32302,
+  "billed_usd": 0.072091836,
+  "retries": 0,
+  "providers": {
+   "CoreWeave": 46,
+   "DeepInfra": 14,
+   "Darkbloom": 129,
+   "Groq": 7,
+   "AkashML": 82,
+   "Parasail": 98,
+   "DekaLLM": 47,
+   "SiliconFlow": 17
+  },
+  "roles": {
+   "planner": {
+    "repairs_per_case": 0.1259259259259259,
+    "fail_rate": 0.007407407407407408,
+    "out_tokens_per_case": 552.9481481481481,
+    "in_tokens_per_case": 3401.9407407407407
+   },
+   "reviewer": {
+    "repairs_per_case": 0.1925925925925926,
+    "fail_rate": 0.037037037037037035,
+    "out_tokens_per_case": 1410.8962962962962,
+    "in_tokens_per_case": 3738.488888888889
+   },
+   "walkthrough": {
+    "repairs_per_case": 0.022222222222222223,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 294.5851851851852,
+    "in_tokens_per_case": 3235.222222222222
+   }
+  },
+  "strict_min": 0.03333333333333333,
+  "strict_max": 0.1,
+  "reps": 3,
+  "hosted": true,
+  "usd_per_review": 0.0005340136,
+  "deployable": true,
+  "lemmy": "MXFP4 12.1 GB, 1xP40",
+  "phase": "openrouter",
+  "label": "or:gpt-oss-20b+think-low+typed-prompt",
+  "gpu": {}
+ },
+ {
+  "cases": 135,
+  "strict": 0.044444444444444446,
+  "detected": 0.32222222222222224,
+  "lenient": 0.08888888888888889,
+  "line_err_med": 5,
+  "noise": 0.9777777777777777,
+  "noise_hi": 0.13333333333333333,
+  "extra_on_planted": 1.0444444444444445,
+  "calib_mae": 0.8348979591836734,
+  "mean_conf": 0.8604929577464788,
+  "ok": 0.9481481481481482,
+  "repairs": 1.9555555555555555,
+  "p50_s": 411.666,
+  "p95_s": 785.9743,
+  "over_prod": 0.8074074074074075,
+  "pp_tps": null,
+  "tg_tps": null,
+  "reason_kchars": 60.614718518518515,
+  "fail_stages": {
+   "reviewer": 7
+  },
+  "by_family": {
+   "correctness": 0.24561403508771928,
+   "security": 0.45454545454545453
+  },
+  "by_op": {
+   "bool_flip": "5/15",
+   "cmp_flip": "7/15",
+   "drop_await": "0/15",
+   "hardcoded_secret": "8/24",
+   "return_flip": "2/12",
+   "tls_off": "7/9"
+  },
+  "wall_h": 16.853629722222223,
+  "billed_usd": 0.61444428,
+  "retries": 0,
+  "providers": {
+   "DeepInfra": 516,
+   "CoreWeave": 138
+  },
+  "roles": {
+   "planner": {
+    "repairs_per_case": 1.0518518518518518,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 4250.022222222222,
+    "in_tokens_per_case": 4147.681481481482
+   },
+   "reviewer": {
+    "repairs_per_case": 0.8666666666666667,
+    "fail_rate": 0.05185185185185185,
+    "out_tokens_per_case": 10692.762962962963,
+    "in_tokens_per_case": 4430.607407407408
+   },
+   "walkthrough": {
+    "repairs_per_case": 0.037037037037037035,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 2060.3555555555554,
+    "in_tokens_per_case": 3588.8074074074075
+   }
+  },
+  "strict_min": 0.0,
+  "strict_max": 0.06666666666666667,
+  "reps": 3,
+  "hosted": true,
+  "usd_per_review": 0.004551439111111111,
+  "deployable": true,
+  "lemmy": "Q8_0 9.3 GB, 1xP40",
+  "phase": "openrouter",
+  "label": "or:granite-4.2-8b",
+  "gpu": {}
+ },
+ {
+  "cases": 135,
+  "strict": 0.03333333333333333,
+  "detected": 0.1,
+  "lenient": 0.05555555555555555,
+  "line_err_med": 3,
+  "noise": 1.0444444444444445,
+  "noise_hi": 0.17777777777777778,
+  "extra_on_planted": 0.7,
+  "calib_mae": 0.831060606060606,
+  "mean_conf": 0.852212389380531,
+  "ok": 1.0,
+  "repairs": 1.9037037037037037,
+  "p50_s": 49.351,
+  "p95_s": 66.3076,
+  "over_prod": 0.0,
+  "pp_tps": null,
+  "tg_tps": null,
+  "reason_kchars": 75.66024444444444,
+  "fail_stages": {},
+  "by_family": {
+   "correctness": 0.08771929824561403,
+   "security": 0.12121212121212122
+  },
+  "by_op": {
+   "bool_flip": "3/15",
+   "cmp_flip": "2/15",
+   "drop_await": "0/15",
+   "hardcoded_secret": "1/24",
+   "return_flip": "0/12",
+   "tls_off": "3/9"
+  },
+  "wall_h": 1.895995,
+  "billed_usd": 1.95913945,
+  "retries": 0,
+  "providers": {
+   "Liquid": 662
+  },
+  "roles": {
+   "planner": {
+    "repairs_per_case": 0.8296296296296296,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 6710.251851851852,
+    "in_tokens_per_case": 3847.2
+   },
+   "reviewer": {
+    "repairs_per_case": 1.0592592592592593,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 11276.2,
+    "in_tokens_per_case": 4373.688888888889
+   },
+   "walkthrough": {
+    "repairs_per_case": 0.014814814814814815,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 1932.5703703703705,
+    "in_tokens_per_case": 3519.7703703703705
+   }
+  },
+  "strict_min": 0.0,
+  "strict_max": 0.06666666666666667,
+  "reps": 3,
+  "hosted": true,
+  "usd_per_review": 0.014512144074074073,
+  "deployable": true,
+  "lemmy": "Q4_K_M 14.5 GB, 1xP40",
+  "phase": "openrouter",
+  "label": "or:lfm2.5-24b-a2b",
+  "gpu": {}
+ },
+ {
+  "cases": 135,
+  "strict": 0.4,
+  "detected": 0.5666666666666667,
+  "lenient": 0.5,
+  "line_err_med": 1,
+  "noise": 3.1333333333333333,
+  "noise_hi": 0.8888888888888888,
+  "extra_on_planted": 2.3444444444444446,
+  "calib_mae": 0.718663967611336,
+  "mean_conf": 0.8359536082474227,
+  "ok": 0.8962962962962963,
+  "repairs": 0.02962962962962963,
+  "p50_s": 21.069,
+  "p95_s": 602.5064,
+  "over_prod": 0.1037037037037037,
+  "pp_tps": null,
+  "tg_tps": null,
+  "reason_kchars": 0.0,
+  "fail_stages": {
+   "reviewer": 14
+  },
+  "by_family": {
+   "correctness": 0.45614035087719296,
+   "security": 0.7575757575757576
+  },
+  "by_op": {
+   "bool_flip": "6/15",
+   "cmp_flip": "14/15",
+   "drop_await": "2/15",
+   "hardcoded_secret": "18/24",
+   "return_flip": "4/12",
+   "tls_off": "7/9"
+  },
+  "wall_h": 3.1084294444444445,
+  "billed_usd": 0.35101318,
+  "retries": 0,
+  "providers": {
+   "DeepInfra": 250,
+   "Parasail": 47,
+   "AkashML": 55,
+   "CoreWeave": 21,
+   "SiliconFlow": 2,
+   "DekaLLM": 6
+  },
+  "roles": {
+   "planner": {
+    "repairs_per_case": 0.0,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 170.02962962962962,
+    "in_tokens_per_case": 3586.311111111111
+   },
+   "reviewer": {
+    "repairs_per_case": 0.02962962962962963,
+    "fail_rate": 0.1037037037037037,
+    "out_tokens_per_case": 1140.4222222222222,
+    "in_tokens_per_case": 3508.5407407407406
+   },
+   "walkthrough": {
+    "repairs_per_case": 0.0,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 249.4962962962963,
+    "in_tokens_per_case": 3129.748148148148
+   }
+  },
+  "strict_min": 0.3333333333333333,
+  "strict_max": 0.4666666666666667,
+  "reps": 3,
+  "hosted": true,
+  "usd_per_review": 0.0026000976296296297,
+  "deployable": false,
+  "lemmy": "IQ4_XS 17.7 GB, 1xP40",
+  "phase": "openrouter",
+  "label": "or:qwen3.6-35b-a3b+think-off+typed-prompt",
+  "gpu": {}
+ },
+ {
+  "cases": 135,
+  "strict": 0.25555555555555554,
+  "detected": 0.4444444444444444,
+  "lenient": 0.3888888888888889,
+  "line_err_med": 1.0,
+  "noise": 3.488888888888889,
+  "noise_hi": 0.9777777777777777,
+  "extra_on_planted": 3.7111111111111112,
+  "calib_mae": 0.7651820728291316,
+  "mean_conf": 0.8178599221789883,
+  "ok": 0.674074074074074,
+  "repairs": 1.5555555555555556,
+  "p50_s": 56.766,
+  "p95_s": 94.25399999999999,
+  "over_prod": 0.007407407407407408,
+  "pp_tps": null,
+  "tg_tps": null,
+  "reason_kchars": 0.0,
+  "fail_stages": {
+   "planner": 6,
+   "reviewer": 38
+  },
+  "by_family": {
+   "correctness": 0.38596491228070173,
+   "security": 0.5454545454545454
+  },
+  "by_op": {
+   "bool_flip": "8/15",
+   "cmp_flip": "7/15",
+   "drop_await": "3/15",
+   "hardcoded_secret": "12/24",
+   "return_flip": "4/12",
+   "tls_off": "6/9"
+  },
+  "wall_h": 2.212855,
+  "billed_usd": 0.566538,
+  "retries": 307,
+  "providers": {
+   "Parasail": 548
+  },
+  "roles": {
+   "planner": {
+    "repairs_per_case": 0.3333333333333333,
+    "fail_rate": 0.044444444444444446,
+    "out_tokens_per_case": 429.8740740740741,
+    "in_tokens_per_case": 3226.837037037037
+   },
+   "reviewer": {
+    "repairs_per_case": 1.2222222222222223,
+    "fail_rate": 0.2814814814814815,
+    "out_tokens_per_case": 3331.725925925926,
+    "in_tokens_per_case": 5331.466666666666
+   },
+   "walkthrough": {
+    "repairs_per_case": 0.0,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 157.5185185185185,
+    "in_tokens_per_case": 2278.3703703703704
+   }
+  },
+  "strict_min": 0.16666666666666666,
+  "strict_max": 0.3,
+  "reps": 3,
+  "hosted": true,
+  "usd_per_review": 0.004196577777777778,
+  "deployable": false,
+  "lemmy": "MXFP4 48 GB, 2xP40 +CPU offload",
+  "phase": "openrouter",
+  "label": "or:qwen3-coder-next",
+  "gpu": {}
+ },
+ {
+  "cases": 135,
+  "strict": 0.2222222222222222,
+  "detected": 0.4222222222222222,
+  "lenient": 0.3111111111111111,
+  "line_err_med": 2.0,
+  "noise": 3.111111111111111,
+  "noise_hi": 0.9555555555555556,
+  "extra_on_planted": 3.6777777777777776,
+  "calib_mae": 0.8348433048433049,
+  "mean_conf": 0.8758248472505091,
+  "ok": 0.8592592592592593,
+  "repairs": 1.8444444444444446,
+  "p50_s": 66.469,
+  "p95_s": 615.4732,
+  "over_prod": 0.11851851851851852,
+  "pp_tps": null,
+  "tg_tps": null,
+  "reason_kchars": 0.0,
+  "fail_stages": {
+   "planner": 6,
+   "reviewer": 13
+  },
+  "by_family": {
+   "correctness": 0.2982456140350877,
+   "security": 0.6363636363636364
+  },
+  "by_op": {
+   "bool_flip": "6/15",
+   "cmp_flip": "11/15",
+   "drop_await": "0/15",
+   "hardcoded_secret": "13/24",
+   "return_flip": "0/12",
+   "tls_off": "8/9"
+  },
+  "wall_h": 5.032856944444444,
+  "billed_usd": 0.233843606,
+  "retries": 0,
+  "providers": {
+   "Cloudflare": 606,
+   "Novita": 9
+  },
+  "roles": {
+   "planner": {
+    "repairs_per_case": 0.9555555555555556,
+    "fail_rate": 0.044444444444444446,
+    "out_tokens_per_case": 544.4666666666667,
+    "in_tokens_per_case": 3546.2814814814815
+   },
+   "reviewer": {
+    "repairs_per_case": 0.8888888888888888,
+    "fail_rate": 0.0962962962962963,
+    "out_tokens_per_case": 2037.637037037037,
+    "in_tokens_per_case": 4275.7555555555555
+   },
+   "walkthrough": {
+    "repairs_per_case": 0.0,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 162.37777777777777,
+    "in_tokens_per_case": 2655.748148148148
+   }
+  },
+  "strict_min": 0.2,
+  "strict_max": 0.23333333333333334,
+  "reps": 3,
+  "hosted": true,
+  "usd_per_review": 0.0017321748592592594,
+  "deployable": false,
+  "lemmy": "Q4_K_M 18.3 GB, 1xP40",
+  "phase": "openrouter",
+  "label": "or:glm-4.7-flash+think-off",
+  "gpu": {}
+ },
+ {
+  "cases": 135,
+  "strict": 0.17777777777777778,
+  "detected": 0.3111111111111111,
+  "lenient": 0.2,
+  "line_err_med": 2.0,
+  "noise": 1.6666666666666667,
+  "noise_hi": 0.4222222222222222,
+  "extra_on_planted": 1.5,
+  "calib_mae": 0.7987417218543046,
+  "mean_conf": 0.8998230088495575,
+  "ok": 0.4888888888888889,
+  "repairs": 1.3111111111111111,
+  "p50_s": 600.002,
+  "p95_s": 700.298,
+  "over_prod": 0.6370370370370371,
+  "pp_tps": null,
+  "tg_tps": null,
+  "reason_kchars": 23.41159259259259,
+  "fail_stages": {
+   "planner": 3,
+   "reviewer": 66
+  },
+  "by_family": {
+   "correctness": 0.22807017543859648,
+   "security": 0.45454545454545453
+  },
+  "by_op": {
+   "bool_flip": "5/15",
+   "cmp_flip": "7/15",
+   "drop_await": "0/15",
+   "hardcoded_secret": "10/24",
+   "return_flip": "1/12",
+   "tls_off": "5/9"
+  },
+  "wall_h": 17.22270222222222,
+  "billed_usd": 0.4067677145,
+  "retries": 0,
+  "providers": {
+   "Cloudflare": 431,
+   "Novita": 10
+  },
+  "roles": {
+   "planner": {
+    "repairs_per_case": 0.837037037037037,
+    "fail_rate": 0.022222222222222223,
+    "out_tokens_per_case": 2817.3185185185184,
+    "in_tokens_per_case": 3445.9333333333334
+   },
+   "reviewer": {
+    "repairs_per_case": 0.4740740740740741,
+    "fail_rate": 0.4888888888888889,
+    "out_tokens_per_case": 3092.948148148148,
+    "in_tokens_per_case": 2063.3259259259257
+   },
+   "walkthrough": {
+    "repairs_per_case": 0.0,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 555.8148148148148,
+    "in_tokens_per_case": 1534.1925925925925
+   }
+  },
+  "strict_min": 0.13333333333333333,
+  "strict_max": 0.23333333333333334,
+  "reps": 3,
+  "hosted": true,
+  "usd_per_review": 0.0030130941814814813,
+  "deployable": false,
+  "lemmy": "Q4_K_M 18.3 GB, 1xP40",
+  "phase": "openrouter",
+  "label": "or:glm-4.7-flash",
+  "gpu": {}
+ },
+ {
+  "cases": 135,
+  "strict": 0.1111111111111111,
+  "detected": 0.28888888888888886,
+  "lenient": 0.2111111111111111,
+  "line_err_med": 2.0,
+  "noise": 1.511111111111111,
+  "noise_hi": 0.3111111111111111,
+  "extra_on_planted": 2.3444444444444446,
+  "calib_mae": 0.8438461538461538,
+  "mean_conf": 0.8817647058823529,
+  "ok": 0.5777777777777777,
+  "repairs": 2.5185185185185186,
+  "p50_s": 23.029,
+  "p95_s": 162.99179999999998,
+  "over_prod": 0.07407407407407407,
+  "pp_tps": null,
+  "tg_tps": null,
+  "reason_kchars": 0.0,
+  "fail_stages": {
+   "planner": 1,
+   "reviewer": 56
+  },
+  "by_family": {
+   "correctness": 0.22807017543859648,
+   "security": 0.3939393939393939
+  },
+  "by_op": {
+   "bool_flip": "4/15",
+   "cmp_flip": "8/15",
+   "drop_await": "0/15",
+   "hardcoded_secret": "8/24",
+   "return_flip": "1/12",
+   "tls_off": "5/9"
+  },
+  "wall_h": 1.7130758333333334,
+  "billed_usd": 0.2230344367,
+  "retries": 0,
+  "providers": {
+   "CoreWeave": 201,
+   "DeepInfra": 403,
+   "Io Net": 70,
+   "Darkbloom": 13
+  },
+  "roles": {
+   "planner": {
+    "repairs_per_case": 0.8740740740740741,
+    "fail_rate": 0.007407407407407408,
+    "out_tokens_per_case": 673.762962962963,
+    "in_tokens_per_case": 3828.3259259259257
+   },
+   "reviewer": {
+    "repairs_per_case": 1.6444444444444444,
+    "fail_rate": 0.4148148148148148,
+    "out_tokens_per_case": 4719.4,
+    "in_tokens_per_case": 6412.851851851852
+   },
+   "walkthrough": {
+    "repairs_per_case": 0.0,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 172.06666666666666,
+    "in_tokens_per_case": 1859.0296296296297
+   }
+  },
+  "strict_min": 0.1,
+  "strict_max": 0.13333333333333333,
+  "reps": 3,
+  "hosted": true,
+  "usd_per_review": 0.0016521069385185185,
+  "deployable": false,
+  "lemmy": "Q8_0 33.6 GB, 2xP40",
+  "phase": "openrouter",
+  "label": "or:nemotron-3.5-lightning-30b-a3b+think-off",
+  "gpu": {}
+ },
+ {
+  "cases": 135,
+  "strict": 0.06666666666666667,
+  "detected": 0.23333333333333334,
+  "lenient": 0.14444444444444443,
+  "line_err_med": 3,
+  "noise": 1.8888888888888888,
+  "noise_hi": 0.3111111111111111,
+  "extra_on_planted": 2.3,
+  "calib_mae": 0.8325821596244132,
+  "mean_conf": 0.8510738255033556,
+  "ok": 0.7333333333333333,
+  "repairs": 2.1555555555555554,
+  "p50_s": 42.276,
+  "p95_s": 231.4037,
+  "over_prod": 0.08888888888888889,
+  "pp_tps": null,
+  "tg_tps": null,
+  "reason_kchars": 25.18068888888889,
+  "fail_stages": {
+   "planner": 2,
+   "reviewer": 34
+  },
+  "by_family": {
+   "correctness": 0.2631578947368421,
+   "security": 0.18181818181818182
+  },
+  "by_op": {
+   "bool_flip": "5/15",
+   "cmp_flip": "9/15",
+   "drop_await": "1/15",
+   "hardcoded_secret": "4/24",
+   "return_flip": "0/12",
+   "tls_off": "2/9"
+  },
+  "wall_h": 2.638790833333333,
+  "billed_usd": 0.3390097215,
+  "retries": 0,
+  "providers": {
+   "CoreWeave": 209,
+   "DeepInfra": 351,
+   "Io Net": 84,
+   "Darkbloom": 14
+  },
+  "roles": {
+   "planner": {
+    "repairs_per_case": 0.837037037037037,
+    "fail_rate": 0.014814814814814815,
+    "out_tokens_per_case": 1544.9925925925927,
+    "in_tokens_per_case": 3797.140740740741
+   },
+   "reviewer": {
+    "repairs_per_case": 1.3037037037037038,
+    "fail_rate": 0.2518518518518518,
+    "out_tokens_per_case": 7614.466666666666,
+    "in_tokens_per_case": 5542.496296296296
+   },
+   "walkthrough": {
+    "repairs_per_case": 0.014814814814814815,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 865.2518518518518,
+    "in_tokens_per_case": 2398.140740740741
+   }
+  },
+  "strict_min": 0.03333333333333333,
+  "strict_max": 0.13333333333333333,
+  "reps": 3,
+  "hosted": true,
+  "usd_per_review": 0.0025111831222222225,
+  "deployable": false,
+  "lemmy": "Q8_0 33.6 GB, 2xP40",
+  "phase": "openrouter",
+  "label": "or:nemotron-3.5-lightning-30b-a3b",
+  "gpu": {}
+ },
+ {
+  "cases": 135,
+  "strict": 0.05555555555555555,
+  "detected": 0.2,
+  "lenient": 0.07777777777777778,
+  "line_err_med": 5.0,
+  "noise": 0.9555555555555556,
+  "noise_hi": 0.2222222222222222,
+  "extra_on_planted": 1.2,
+  "calib_mae": 0.8143362831858407,
+  "mean_conf": 0.8557692307692307,
+  "ok": 0.8148148148148148,
+  "repairs": 2.0074074074074075,
+  "p50_s": 35.361,
+  "p95_s": 605.1613,
+  "over_prod": 0.15555555555555556,
+  "pp_tps": null,
+  "tg_tps": null,
+  "reason_kchars": 3.4031111111111114,
+  "fail_stages": {
+   "planner": 10,
+   "reviewer": 15
+  },
+  "by_family": {
+   "correctness": 0.24561403508771928,
+   "security": 0.12121212121212122
+  },
+  "by_op": {
+   "bool_flip": "4/15",
+   "cmp_flip": "5/15",
+   "drop_await": "5/15",
+   "hardcoded_secret": "1/24",
+   "return_flip": "0/12",
+   "tls_off": "3/9"
+  },
+  "wall_h": 3.650926111111111,
+  "billed_usd": 0.063937736,
+  "retries": 0,
+  "providers": {
+   "Groq": 10,
+   "DeepInfra": 37,
+   "CoreWeave": 73,
+   "Darkbloom": 205,
+   "AkashML": 123,
+   "DekaLLM": 65,
+   "Parasail": 100,
+   "SiliconFlow": 18
+  },
+  "roles": {
+   "planner": {
+    "repairs_per_case": 1.0592592592592593,
+    "fail_rate": 0.07407407407407407,
+    "out_tokens_per_case": 465.89629629629627,
+    "in_tokens_per_case": 3604.362962962963
+   },
+   "reviewer": {
+    "repairs_per_case": 0.9407407407407408,
+    "fail_rate": 0.1111111111111111,
+    "out_tokens_per_case": 1887.3925925925926,
+    "in_tokens_per_case": 3899.4962962962964
+   },
+   "walkthrough": {
+    "repairs_per_case": 0.007407407407407408,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 177.57777777777778,
+    "in_tokens_per_case": 2682.288888888889
+   }
+  },
+  "strict_min": 0.0,
+  "strict_max": 0.1,
+  "reps": 3,
+  "hosted": true,
+  "usd_per_review": 0.0004736128592592592,
+  "deployable": false,
+  "lemmy": "MXFP4 12.1 GB, 1xP40",
+  "phase": "openrouter",
+  "label": "or:gpt-oss-20b+think-low",
+  "gpu": {}
+ },
+ {
+  "cases": 135,
+  "strict": 0.044444444444444446,
+  "detected": 0.1,
+  "lenient": 0.07777777777777778,
+  "line_err_med": 2,
+  "noise": 1.6666666666666667,
+  "noise_hi": 0.2,
+  "extra_on_planted": 1.1666666666666667,
+  "calib_mae": 0.8289908256880734,
+  "mean_conf": 0.8470652173913044,
+  "ok": 0.42962962962962964,
+  "repairs": 2.8296296296296295,
+  "p50_s": 70.784,
+  "p95_s": 111.1555,
+  "over_prod": 0.0,
+  "pp_tps": null,
+  "tg_tps": null,
+  "reason_kchars": 0.0,
+  "fail_stages": {
+   "planner": 5,
+   "reviewer": 72
+  },
+  "by_family": {
+   "correctness": 0.10526315789473684,
+   "security": 0.09090909090909091
+  },
+  "by_op": {
+   "bool_flip": "1/15",
+   "cmp_flip": "4/15",
+   "drop_await": "0/15",
+   "hardcoded_secret": "2/24",
+   "return_flip": "1/12",
+   "tls_off": "1/9"
+  },
+  "wall_h": 2.677083888888889,
+  "billed_usd": 1.14765816,
+  "retries": 0,
+  "providers": {
+   "Cloudflare": 705
+  },
+  "roles": {
+   "planner": {
+    "repairs_per_case": 1.037037037037037,
+    "fail_rate": 0.037037037037037035,
+    "out_tokens_per_case": 229.1851851851852,
+    "in_tokens_per_case": 3559.1037037037036
+   },
+   "reviewer": {
+    "repairs_per_case": 1.6444444444444444,
+    "fail_rate": 0.5333333333333333,
+    "out_tokens_per_case": 1701.762962962963,
+    "in_tokens_per_case": 4724.881481481481
+   },
+   "walkthrough": {
+    "repairs_per_case": 0.14814814814814814,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 119.97777777777777,
+    "in_tokens_per_case": 1489.1703703703704
+   }
+  },
+  "strict_min": 0.0,
+  "strict_max": 0.06666666666666667,
+  "reps": 3,
+  "hosted": true,
+  "usd_per_review": 0.008501171555555555,
+  "deployable": false,
+  "lemmy": "Q4_K_M 19.9 GB, 2xP40",
+  "phase": "openrouter",
+  "label": "or:qwen2.5-coder-32b",
+  "gpu": {}
+ },
+ {
+  "cases": 135,
+  "strict": 0.03333333333333333,
+  "detected": 0.17777777777777778,
+  "lenient": 0.06666666666666667,
+  "line_err_med": 9.5,
+  "noise": 2.1333333333333333,
+  "noise_hi": 0.6222222222222222,
+  "extra_on_planted": 2.9555555555555557,
+  "calib_mae": 0.9004089219330854,
+  "mean_conf": 0.912931506849315,
+  "ok": 0.5111111111111111,
+  "repairs": 2.859259259259259,
+  "p50_s": 99.94,
+  "p95_s": 149.66369999999998,
+  "over_prod": 0.0,
+  "pp_tps": null,
+  "tg_tps": null,
+  "reason_kchars": 0.0,
+  "fail_stages": {
+   "reviewer": 66
+  },
+  "by_family": {
+   "correctness": 0.08771929824561403,
+   "security": 0.3333333333333333
+  },
+  "by_op": {
+   "bool_flip": "2/15",
+   "cmp_flip": "0/15",
+   "drop_await": "3/15",
+   "hardcoded_secret": "5/24",
+   "return_flip": "0/12",
+   "tls_off": "6/9"
+  },
+  "wall_h": 3.760702222222222,
+  "billed_usd": 0.49657528,
+  "retries": 0,
+  "providers": {
+   "Mistral": 725
+  },
+  "roles": {
+   "planner": {
+    "repairs_per_case": 1.0,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 983.5259259259259,
+    "in_tokens_per_case": 4259.281481481482
+   },
+   "reviewer": {
+    "repairs_per_case": 1.8592592592592592,
+    "fail_rate": 0.4888888888888889,
+    "out_tokens_per_case": 5284.3481481481485,
+    "in_tokens_per_case": 7812.933333333333
+   },
+   "walkthrough": {
+    "repairs_per_case": 0.0,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 151.7037037037037,
+    "in_tokens_per_case": 1975.7703703703703
+   }
+  },
+  "strict_min": 0.03333333333333333,
+  "strict_max": 0.03333333333333333,
+  "reps": 3,
+  "hosted": true,
+  "usd_per_review": 0.0036783354074074073,
+  "deployable": false,
+  "lemmy": "Q4_K_M 8.2 GB, 1xP40",
+  "phase": "openrouter",
+  "label": "or:ministral-3-14b",
+  "gpu": {}
+ },
+ {
+  "cases": 135,
+  "strict": 0.03333333333333333,
+  "detected": 0.15555555555555556,
+  "lenient": 0.06666666666666667,
+  "line_err_med": 12.0,
+  "noise": 1.4222222222222223,
+  "noise_hi": 0.17777777777777778,
+  "extra_on_planted": 1.488888888888889,
+  "calib_mae": 0.8573722627737226,
+  "mean_conf": 0.8658706467661691,
+  "ok": 0.5037037037037037,
+  "repairs": 1.2518518518518518,
+  "p50_s": 50.703,
+  "p95_s": 97.9052,
+  "over_prod": 0.0,
+  "pp_tps": null,
+  "tg_tps": null,
+  "reason_kchars": 0.0,
+  "fail_stages": {
+   "reviewer": 67
+  },
+  "by_family": {
+   "correctness": 0.08771929824561403,
+   "security": 0.2727272727272727
+  },
+  "by_op": {
+   "bool_flip": "0/15",
+   "cmp_flip": "5/15",
+   "drop_await": "0/15",
+   "hardcoded_secret": "3/24",
+   "return_flip": "0/12",
+   "tls_off": "6/9"
+  },
+  "wall_h": 1.9833302777777777,
+  "billed_usd": 1.070453,
+  "retries": 0,
+  "providers": {
+   "Cloudflare": 507
+  },
+  "roles": {
+   "planner": {
+    "repairs_per_case": 0.0,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 87.16296296296296,
+    "in_tokens_per_case": 3361.4444444444443
+   },
+   "reviewer": {
+    "repairs_per_case": 1.0888888888888888,
+    "fail_rate": 0.4962962962962963,
+    "out_tokens_per_case": 1258.0740740740741,
+    "in_tokens_per_case": 4460.133333333333
+   },
+   "walkthrough": {
+    "repairs_per_case": 0.16296296296296298,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 147.85185185185185,
+    "in_tokens_per_case": 1930.2740740740742
+   }
+  },
+  "strict_min": 0.0,
+  "strict_max": 0.06666666666666667,
+  "reps": 3,
+  "hosted": true,
+  "usd_per_review": 0.007929281481481483,
+  "deployable": false,
+  "lemmy": "Q4_K_M 19.9 GB, 2xP40",
+  "phase": "openrouter",
+  "label": "or:qwen2.5-coder-32b+typed-prompt",
+  "gpu": {}
+ },
+ {
+  "cases": 135,
+  "strict": 0.022222222222222223,
+  "detected": 0.32222222222222224,
+  "lenient": 0.06666666666666667,
+  "line_err_med": 7,
+  "noise": 1.6444444444444444,
+  "noise_hi": 0.3333333333333333,
+  "extra_on_planted": 1.4333333333333333,
+  "calib_mae": 0.8425954198473282,
+  "mean_conf": 0.8526829268292683,
+  "ok": 0.7185185185185186,
+  "repairs": 1.6888888888888889,
+  "p50_s": 141.547,
+  "p95_s": 652.715,
+  "over_prod": 0.42962962962962964,
+  "pp_tps": null,
+  "tg_tps": null,
+  "reason_kchars": 27.89351111111111,
+  "fail_stages": {
+   "planner": 14,
+   "reviewer": 24
+  },
+  "by_family": {
+   "correctness": 0.22807017543859648,
+   "security": 0.48484848484848486
+  },
+  "by_op": {
+   "bool_flip": "3/15",
+   "cmp_flip": "6/15",
+   "drop_await": "4/15",
+   "hardcoded_secret": "8/24",
+   "return_flip": "0/12",
+   "tls_off": "8/9"
+  },
+  "wall_h": 10.035107777777778,
+  "billed_usd": 0.147919554,
+  "retries": 0,
+  "providers": {
+   "Parasail": 91,
+   "AkashML": 87,
+   "Darkbloom": 175,
+   "DekaLLM": 54,
+   "Groq": 17,
+   "CoreWeave": 85,
+   "DeepInfra": 31,
+   "SiliconFlow": 6
+  },
+  "roles": {
+   "planner": {
+    "repairs_per_case": 1.0444444444444445,
+    "fail_rate": 0.1037037037037037,
+    "out_tokens_per_case": 2095.874074074074,
+    "in_tokens_per_case": 3669.4592592592594
+   },
+   "reviewer": {
+    "repairs_per_case": 0.6370370370370371,
+    "fail_rate": 0.17777777777777778,
+    "out_tokens_per_case": 5267.051851851852,
+    "in_tokens_per_case": 2923.9703703703703
+   },
+   "walkthrough": {
+    "repairs_per_case": 0.007407407407407408,
+    "fail_rate": 0.0,
+    "out_tokens_per_case": 389.7185185185185,
+    "in_tokens_per_case": 2139.0666666666666
+   }
+  },
+  "strict_min": 0.0,
+  "strict_max": 0.06666666666666667,
+  "reps": 3,
+  "hosted": true,
+  "usd_per_review": 0.0010957004000000002,
+  "deployable": false,
+  "lemmy": "MXFP4 12.1 GB, 1xP40",
+  "phase": "openrouter",
+  "label": "or:gpt-oss-20b",
+  "gpu": {}
+ }
+]

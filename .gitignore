@@ -23,3 +23,7 @@ __pycache__/
 .orkey
 or_models.json
 prompt-exports/
+
+# drydock suite: hidden planted-bug datasets are regenerated from the corpus;
+# never publish them (models trained on them would make the bench meaningless)
+suites/drydock/data/

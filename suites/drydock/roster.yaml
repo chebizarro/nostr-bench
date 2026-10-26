@@ -1,0 +1,225 @@
+# Drydock local-model roster for 2x Tesla P40.
+#
+# Generated from a live scan on 2026-10-26 (OpenRouter /models for what is
+# current, Hugging Face tree API for real GGUF sizes). Re-scan before a real
+# run; sizes are weights only (KV cache + CUDA context come on top).
+#
+# Why these rules — Tesla P40 facts that drive the choices:
+#   * Pascal sm_61, 24 GB GDDR5 per card, ~347 GB/s. FP16 runs at 1/64 rate, so
+#     serving is llama.cpp GGUF on its FP32/int8 (MMQ/dp4a) kernels. vLLM and
+#     ExLlama need sm_70+ / fast FP16 and are out.
+#   * Decode is memory-bandwidth bound: active parameters, not total, set
+#     tok/s. MoE models with ~3-4B active run several times faster than dense
+#     27-32B, and dense 70B is ~5 tok/s across both cards.
+#   * Prefill is compute bound and slow on Pascal; drydock prompts are large
+#     (40 KiB patch layer + context), and production uses a 120 s HTTP timeout
+#     per call. The bench measures prefill and decode separately.
+#   * "fits 1 GPU" means weights <= ~19 GB so 32k context of q8_0 KV still fits.
+
+rig:
+  name: "2x Tesla P40 (48 GB)"
+  gpus: [0, 1]
+  usable_gb_per_gpu: 22.5
+  cost_per_hour: 0.15          # electricity + amortisation, for $/review
+  prod_call_timeout_s: 120     # reviewengine.NewOpenAICompatClient
+
+serve_defaults:               # llama-server flags shared by every run
+  ctx: 32768
+  cache_type: q8_0             # needs flash attention; halves KV vs f16
+  flash_attn: "on"
+  parallel: 1                  # drydock calls are sequential per review
+  split_mode: layer            # 'row' is often faster for DENSE models on P40 pairs; swept in phase 2
+  extra: ["--jinja", "--metrics", "--no-webui"]
+
+# role tags: reviewer = coder32b/llm70b/coder14b routes; planner = planner +
+# walkthrough (strict JSON, routing). 'incumbent' = what production ran.
+models:
+  # ---------------- incumbents (baselines) ----------------
+  - id: gemma-4-26b-a4b
+    hf: unsloth/gemma-4-26B-A4B-it-GGUF
+    openrouter: google/gemma-4-26b-a4b-it
+    quants: {Q4_K_M: 16.9, Q5_K_M: 21.2, Q8_0: 26.9}
+    arch: "MoE 26B / 4B active"
+    roles: [planner, reviewer]
+    incumbent: true            # 291 of the corpus reviews
+    thinking: true
+    spec: [ngram-mod]          # an MTP head GGUF exists; add draft-mtp once its file name is confirmed
+  - id: qwen2.5-coder-32b
+    hf: Qwen/Qwen2.5-Coder-32B-Instruct-GGUF
+    openrouter: qwen/qwen-2.5-coder-32b-instruct
+    quants: {Q4_K_M: 19.9}
+    arch: "dense 32B"
+    roles: [reviewer]
+    incumbent: true            # coder32b route default
+    spec: [ngram-mod]
+  - id: qwen2.5-coder-14b
+    hf: Qwen/Qwen2.5-Coder-14B-Instruct-GGUF
+    openrouter: null           # not on OpenRouter (2026-10-26): Lemmy-only
+    quants: {Q4_K_M: 9.0, Q8_0: 15.7}
+    arch: "dense 14B"
+    roles: [planner, reviewer]
+    incumbent: true            # planner + coder14b defaults
+  - id: llama-3.3-70b
+    hf: bartowski/Llama-3.3-70B-Instruct-GGUF
+    openrouter: meta-llama/llama-3.3-70b-instruct
+    quants: {Q4_K_M: 42.5, IQ4_XS: 37.9}   # Q4_K_M = production; IQ4_XS if 16k ctx OOMs
+    arch: "dense 70B"
+    roles: [reviewer]
+    incumbent: true            # llm70b + meta defaults
+    gpus: 2
+    ctx: 16384                 # Q4_K_M leaves ~4 GB for KV across both cards
+
+  # ---------------- current open-weight candidates ----------------
+  - id: qwen3.8-27b
+    hf: unsloth/Qwen3.8-27B-GGUF
+    openrouter: qwen/qwen3.8-27b
+    quants: {Q4_K_M: 16.5, Q5_K_M: 19.8, Q8_0: 29.0}
+    arch: "dense 27B"
+    roles: [reviewer, planner]
+    thinking: true
+    spec: [ngram-mod]
+  - id: qwen3.6-27b
+    hf: unsloth/Qwen3.6-27B-GGUF
+    openrouter: qwen/qwen3.6-27b
+    quants: {Q4_K_M: 16.8, Q5_K_M: 19.5, Q8_0: 28.6}
+    arch: "dense 27B"
+    roles: [reviewer]
+    thinking: true
+  - id: qwen3.6-35b-a3b
+    hf: unsloth/Qwen3.6-35B-A3B-GGUF
+    openrouter: qwen/qwen3.6-35b-a3b
+    hf_mtp: unsloth/Qwen3.6-35B-A3B-MTP-GGUF
+    quants: {IQ4_XS: 17.7, Q4_K_M: 22.1, Q8_0: 36.9}
+    arch: "MoE 35B / 3B active"
+    roles: [planner, reviewer]
+    thinking: true
+    gpus_by_quant: {IQ4_XS: 1, Q4_K_M: 2, Q8_0: 2}
+    spec: [ngram-mod, draft-mtp]
+  - id: gemma-4-31b
+    hf: unsloth/gemma-4-31B-it-GGUF
+    openrouter: google/gemma-4-31b-it
+    quants: {Q4_K_M: 18.3, Q8_0: 32.6}
+    arch: "dense 31B"
+    roles: [reviewer]
+    thinking: true
+    gpus_by_quant: {Q4_K_M: 1, Q8_0: 2}
+  - id: glm-4.7-flash
+    hf: unsloth/GLM-4.7-Flash-GGUF
+    openrouter: z-ai/glm-4.7-flash
+    quants: {Q4_K_M: 18.3, Q8_0: 31.8}
+    arch: "MoE ~30B / ~3B active"
+    roles: [planner, reviewer]
+    thinking: true
+    gpus_by_quant: {Q4_K_M: 1, Q8_0: 2}
+  - id: nemotron-3.5-lightning-30b-a3b
+    hf: ggml-org/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-GGUF
+    openrouter: nvidia/nemotron-3.5-lightning
+    quants: {Q8_0: 33.6}
+    arch: "hybrid MoE 30B / 3B active"
+    roles: [planner, reviewer]
+    thinking: true
+    gpus: 2
+    spec: [ngram-mod]          # ggml-org also ships a separate MTP GGUF: set draft_hf: <repo>:<file> to sweep draft-mtp
+  - id: muse-glimmer-30b
+    hf: unsloth/Muse-Glimmer-30B-GGUF
+    openrouter: meta/muse-glimmer-30b
+    quants: {UD-Q4_K_XL: 15.9, Q5_K_M: 19.2, Q8_0: 29.6}
+    arch: "30B"
+    roles: [reviewer, planner]
+    spec: [ngram-mod]          # Meta's DFlash drafter: add draft-dflash + draft_hf once you have it
+  - id: devstral-small-2-24b
+    hf: unsloth/Devstral-Small-2-24B-Instruct-2512-GGUF
+    openrouter: null           # not on OpenRouter (2026-10-26): Lemmy-only
+    quants: {Q4_K_M: 14.3, Q5_K_M: 16.8, Q8_0: 25.1}
+    arch: "dense 24B"
+    roles: [reviewer]
+    gpus_by_quant: {Q8_0: 2}
+  - id: seed-oss-36b
+    hf: unsloth/Seed-OSS-36B-Instruct-GGUF
+    openrouter: null           # not on OpenRouter (2026-10-26): Lemmy-only
+    quants: {IQ4_XS: 19.5, Q4_K_M: 21.8}
+    arch: "dense 36B"
+    roles: [reviewer]
+    thinking: true
+    gpus_by_quant: {IQ4_XS: 1, Q4_K_M: 2}
+  - id: qwen3-coder-30b-a3b
+    hf: unsloth/Qwen3-Coder-30B-A3B-Instruct-GGUF
+    openrouter: qwen/qwen3-coder-30b-a3b-instruct
+    quants: {IQ4_XS: 16.4, Q4_K_M: 18.6, Q8_0: 32.5}
+    arch: "MoE 30B / 3B active, coder"
+    roles: [reviewer, planner]
+    gpus_by_quant: {IQ4_XS: 1, Q4_K_M: 1, Q8_0: 2}
+    spec: [ngram-mod]
+  - id: lfm2.5-24b-a2b
+    hf: LiquidAI/LFM2.5-24B-A2B-GGUF
+    openrouter: liquid/lfm-2.5-24b-a2b
+    quants: {Q4_K_M: 14.5, Q8_0: 25.5}
+    arch: "MoE 24B / 2.45B active (always reasons)"
+    roles: [planner, reviewer]
+    gpus_by_quant: {Q8_0: 2}
+    spec: [ngram-mod]
+  - id: gpt-oss-20b
+    hf: ggml-org/gpt-oss-20b-GGUF
+    openrouter: openai/gpt-oss-20b
+    quants: {MXFP4: 12.1}
+    arch: "MoE 21B / 3.6B active"
+    roles: [planner, reviewer]
+    thinking: effort           # cannot be turned off; sweep reasoning effort instead
+  - id: ministral-3-14b
+    hf: mistralai/Ministral-3-14B-Instruct-2512-GGUF
+    openrouter: mistralai/ministral-14b-2512
+    quants: {Q4_K_M: 8.2, Q8_0: 14.4}
+    arch: "dense 14B"
+    roles: [planner]
+  - id: granite-4.2-8b
+    hf: ibm-granite/granite-4.2-8b-GGUF
+    openrouter: ibm-granite/granite-4.2-8b
+    quants: {Q8_0: 9.3}
+    arch: "dense 8B"
+    roles: [planner]
+
+  # ---------------- bigger than 48 GB: experts offloaded to system RAM ----------------
+  # Needs >= 96 GB host RAM and a fast CPU; excluded unless --include-offload.
+  - id: gpt-oss-120b
+    hf: ggml-org/gpt-oss-120b-GGUF
+    openrouter: openai/gpt-oss-120b
+    quants: {MXFP4: 63.4}
+    arch: "MoE 117B / 5.1B active"
+    roles: [reviewer]
+    thinking: effort
+    gpus: 2
+    offload: {n_cpu_moe: 12}
+  - id: qwen3-coder-next
+    hf: unsloth/Qwen3-Coder-Next-GGUF
+    openrouter: qwen/qwen3-coder-next
+    quants: {MXFP4: 48.0}
+    arch: "MoE 80B / 3B active"
+    roles: [reviewer]
+    gpus: 2
+    offload: {n_cpu_moe: 6}
+
+# Cloud-only ceilings (OpenRouter arm only, never deployable to Lemmy). If these
+# also score low, the suite is hard rather than the local models weak.
+references:
+  - id: deepseek-v4-pro
+    openrouter: deepseek/deepseek-v4-pro
+    thinking: true
+  - id: deepseek-v4.1-flash
+    openrouter: deepseek/deepseek-v4.1-flash
+    thinking: true
+
+# Phase plans consumed by sweep.py. Keep phase 1 cheap: one quant per model,
+# production thinking behaviour, n=1. Promote the top few to phases 2-3.
+phases:
+  openrouter:                  # accuracy + JSON reliability at full precision, before touching Lemmy
+    reps: 3
+    workers: 10                # concurrent cases per model
+  screen:                      # every model serves every role (one server)
+    quant: smallest_fitting    # first quant listed that fits the model's GPU budget
+    reps: 1
+  efficiency:                  # top-N from screen, n=3
+    top: 4
+    reps: 3
+    axes: [quant, thinking, spec, split_mode, annotate_lines]
+  deploy:                      # role splits across the two cards
+    reps: 3
